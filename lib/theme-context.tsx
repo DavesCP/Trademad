@@ -12,6 +12,22 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
+let transitionTimeout: ReturnType<typeof setTimeout> | null = null
+
+const triggerThemeTransition = () => {
+  const root = document.documentElement
+  root.classList.add("theme-transition")
+
+  if (transitionTimeout) {
+    clearTimeout(transitionTimeout)
+  }
+
+  transitionTimeout = setTimeout(() => {
+    root.classList.remove("theme-transition")
+    transitionTimeout = null
+  }, 700)
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("light")
   const [mounted, setMounted] = useState(false)
@@ -36,6 +52,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const setTheme = (newTheme: Theme) => {
+    triggerThemeTransition()
     setThemeState(newTheme)
     localStorage.setItem("theme", newTheme)
     document.documentElement.classList.toggle("dark", newTheme === "dark")

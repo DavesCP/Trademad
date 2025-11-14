@@ -114,8 +114,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    transition: background-color 0.8s ease, color 0.8s ease,
-      border-color 0.8s ease, fill 0.8s ease, stroke 0.8s ease;
   }
   body {
     @apply bg-background text-foreground;
@@ -190,13 +188,20 @@
     background-size: 400px 400px;
     background-blend-mode: overlay;
   }
+}
 
-  .bg-card,
-  .bg-popover,
-  .bg-background {
-    transition: background-color 0.8s ease, color 0.8s ease,
-      box-shadow 0.8s ease;
-  }
+.theme-transition {
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition-property: background-color, color, border-color, fill, stroke,
+    box-shadow;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  will-change: background-color, color, border-color, fill, stroke, box-shadow;
 }
 
 /* Animações customizadas para textos e elementos */
