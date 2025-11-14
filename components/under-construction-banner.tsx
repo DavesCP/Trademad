@@ -40,47 +40,51 @@ export function UnderConstructionBanner() {
       </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[14%] left-[-14%] w-60 h-20 bg-gradient-to-r from-primary/15 via-primary/25 to-primary/15 rounded-2xl animate-float-slow rotate-6 shadow-2xl backdrop-blur-sm md:w-72 md:h-24" />
-        <div className="absolute top-[62%] right-[-12%] w-72 h-24 bg-gradient-to-r from-accent/15 via-accent/25 to-accent/15 rounded-2xl animate-float-medium -rotate-6 shadow-2xl backdrop-blur-sm md:w-80 md:h-28" />
-        <div className="absolute bottom-[18%] left-[6%] w-60 h-16 bg-gradient-to-r from-secondary/15 via-secondary/25 to-secondary/15 rounded-2xl animate-float-fast -rotate-3 shadow-2xl backdrop-blur-sm md:w-72 md:h-20" />
+        <div className="hidden sm:block absolute top-[14%] left-[-14%] w-60 h-20 bg-gradient-to-r from-primary/15 via-primary/25 to-primary/15 rounded-2xl animate-float-slow rotate-6 shadow-2xl backdrop-blur-sm md:w-72 md:h-24" />
+        <div className="hidden sm:block absolute top-[62%] right-[-12%] w-72 h-24 bg-gradient-to-r from-accent/15 via-accent/25 to-accent/15 rounded-2xl animate-float-medium -rotate-6 shadow-2xl backdrop-blur-sm md:w-80 md:h-28" />
+        <div className="hidden sm:block absolute bottom-[18%] left-[6%] w-60 h-16 bg-gradient-to-r from-secondary/15 via-secondary/25 to-secondary/15 rounded-2xl animate-float-fast -rotate-3 shadow-2xl backdrop-blur-sm md:w-72 md:h-20" />
 
-        <div className="absolute top-[24%] right-[12%] w-14 h-52 bg-gradient-to-b from-primary/20 via-primary/30 to-primary/20 rounded-2xl animate-float-medium -rotate-6 shadow-2xl backdrop-blur-sm md:w-16 md:h-64" />
-        <div className="absolute bottom-[28%] right-[4%] w-16 h-64 bg-gradient-to-b from-accent/20 via-accent/30 to-accent/20 rounded-2xl animate-float-slow rotate-6 shadow-2xl backdrop-blur-sm md:w-20 md:h-72" />
+        <div className="hidden sm:block absolute top-[24%] right-[12%] w-14 h-52 bg-gradient-to-b from-primary/20 via-primary/30 to-primary/20 rounded-2xl animate-float-medium -rotate-6 shadow-2xl backdrop-blur-sm md:w-16 md:h-64" />
+        <div className="hidden sm:block absolute bottom-[28%] right-[4%] w-16 h-64 bg-gradient-to-b from-accent/20 via-accent/30 to-accent/20 rounded-2xl animate-float-slow rotate-6 shadow-2xl backdrop-blur-sm md:w-20 md:h-72" />
 
-        <div className="absolute top-[22%] right-[36%] w-10 h-10 bg-primary/25 rounded-xl animate-spin-slow shadow-lg backdrop-blur-sm" />
-        <div className="absolute bottom-[36%] left-[26%] w-8 h-8 bg-accent/25 rounded-xl animate-spin-slow animation-delay-200 shadow-lg backdrop-blur-sm" />
-        <div className="absolute top-[68%] right-[46%] w-12 h-12 bg-secondary/25 rounded-xl animate-spin-slow animation-delay-400 shadow-lg backdrop-blur-sm" />
-        <div className="absolute top-[42%] left-[16%] w-7 h-7 bg-primary/20 rounded-xl animate-spin-slow animation-delay-600 shadow-lg backdrop-blur-sm" />
+        <div className="hidden sm:block absolute top-[22%] right-[36%] w-10 h-10 bg-primary/25 rounded-xl animate-spin-slow shadow-lg backdrop-blur-sm" />
+        <div className="hidden sm:block absolute bottom-[36%] left-[26%] w-8 h-8 bg-accent/25 rounded-xl animate-spin-slow animation-delay-200 shadow-lg backdrop-blur-sm" />
+        <div className="hidden sm:block absolute top-[68%] right-[46%] w-12 h-12 bg-secondary/25 rounded-xl animate-spin-slow animation-delay-400 shadow-lg backdrop-blur-sm" />
+        <div className="hidden sm:block absolute top-[42%] left-[16%] w-7 h-7 bg-primary/20 rounded-xl animate-spin-slow animation-delay-600 shadow-lg backdrop-blur-sm" />
+
+        <div className="sm:hidden absolute top-[18%] left-[10%] w-32 h-12 bg-gradient-to-r from-primary/20 via-primary/25 to-primary/20 rounded-2xl animate-float-slow shadow-xl backdrop-blur-sm" />
+        <div className="sm:hidden absolute bottom-[22%] right-[10%] w-32 h-10 bg-gradient-to-r from-secondary/20 via-secondary/25 to-secondary/20 rounded-2xl animate-float-medium shadow-xl backdrop-blur-sm" />
+        <div className="sm:hidden absolute top-[55%] left-1/2 h-8 w-8 -translate-x-1/2 transform bg-accent/25 rounded-xl animate-spin-slow shadow-lg backdrop-blur-sm" />
       </div>
 
-      <div className="absolute inset-x-0 top-[5.5rem] bottom-6 flex items-center justify-center px-4 sm:px-6">
-        <div className="pointer-events-auto w-full max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary shadow-lg backdrop-blur-sm animate-bounce-slow">
+      <div className="absolute inset-x-0 top-20 bottom-4 flex items-center justify-center px-5 sm:px-6">
+        <div className="pointer-events-auto w-full max-w-md mx-auto sm:max-w-3xl">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-primary shadow-lg backdrop-blur-sm animate-bounce-slow sm:text-xs">
             <Hammer className="h-4 w-4" aria-hidden="true" />
             <span>{t("underConstruction.badge")}</span>
           </div>
 
-          <div className="relative mt-3 rounded-3xl border border-primary/30 bg-card/90 dark:bg-card/85 p-4 shadow-2xl backdrop-blur-2xl animate-scale-in sm:p-6">
+          <div className="relative mt-3 rounded-3xl border border-primary/30 bg-card/90 dark:bg-card/85 p-3.5 shadow-2xl backdrop-blur-2xl animate-scale-in sm:mx-auto sm:p-6">
             <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/70 to-transparent opacity-60" />
 
             <div
-              className="space-y-4 sm:space-y-4.5"
+              className="space-y-3.5 sm:space-y-4.5"
               role="status"
               aria-live="polite"
             >
               <div className="space-y-1.5 text-center sm:space-y-2.5">
-                <h1 className="text-[clamp(1.6rem,3.6vw,2.7rem)] font-serif font-bold leading-snug text-foreground">
+                <h1 className="text-[clamp(1.35rem,4vw,2.6rem)] font-serif font-bold leading-snug text-foreground">
                   {t("underConstruction.title")}
                 </h1>
-                <p className="text-[clamp(0.95rem,2.6vw,1.15rem)] font-semibold text-primary">
+                <p className="text-[clamp(0.9rem,3.2vw,1.1rem)] font-semibold text-primary">
                   {t("underConstruction.subtitle")}
                 </p>
-                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-[0.95rem]">
+                <p className="mx-auto max-w-2xl text-[0.85rem] leading-relaxed text-muted-foreground sm:text-[0.95rem]">
                   {t("underConstruction.description")}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 gap-2.5 min-[420px]:grid-cols-2 sm:grid-cols-3 sm:gap-3">
+              <div className="grid grid-cols-1 gap-2 min-[420px]:grid-cols-2 sm:grid-cols-3 sm:gap-3">
                 <div className="flex flex-col items-center gap-2 rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/12 to-primary/6 p-3 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.03] sm:p-3.5">
                   <div className="rounded-xl bg-primary/20 p-1.5">
                     <Navigation
