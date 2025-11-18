@@ -10,7 +10,7 @@ export function ContactSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}

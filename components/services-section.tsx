@@ -34,7 +34,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-24 bg-muted/30">
+    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-balance">{t("services.title")}</h2>
@@ -48,9 +48,9 @@ export function ServicesSection() {
             return (
               <div
                 key={service.key}
-                className="bg-card rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-border"
+                className="rounded-3xl border border-border/40 bg-white/95 dark:bg-card/95 p-8 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.15)] transition-all hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/0 flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{t(`services.items.${service.key}.title`)}</h3>

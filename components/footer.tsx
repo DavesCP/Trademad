@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Leaf } from "lucide-react"
+import { Download, Leaf } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
           {/* Brand */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">TM</span>
@@ -20,6 +20,15 @@ export function Footer() {
               <span className="font-serif text-2xl font-bold">TradeMad</span>
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">{t("footer.brandDescription")}</p>
+            <a
+              href="/files/catalogo-trademad.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-emerald-950 shadow hover:bg-emerald-300 transition-colors"
+            >
+              <Download className="h-4 w-4" />
+              {t("footer.downloadCatalog")}
+            </a>
           </div>
 
           {/* Quick Links */}

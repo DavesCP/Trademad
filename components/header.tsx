@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -57,15 +58,27 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav className="container mx-auto px-4 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border flex justify-center">
+      <nav className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-bold text-xl">TM</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:scale-105">
+              <Image
+                src="/images/favicon-trademad.png"
+                alt="TradeMad mark"
+                fill
+                sizes="(max-width: 768px) 56px, 64px"
+                priority
+                className="object-contain drop-shadow-lg"
+              />
             </div>
-            <span className="font-serif text-2xl font-bold text-foreground">TradeMad</span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-serif font-bold text-foreground text-xl sm:text-2xl">TradeMad</span>
+              <span className="uppercase tracking-[0.2em] text-muted-foreground text-[0.55rem] sm:text-xs">
+                international timber trade
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

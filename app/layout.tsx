@@ -6,6 +6,9 @@ import "./globals.css"
 import { LanguageProvider } from "@/lib/language-context"
 import { ThemeProvider } from "@/lib/theme-context"
 import { UnderConstructionBanner } from "@/components/under-construction-banner"
+import { BodyBackgroundActivator } from "@/components/body-background-activator"
+
+const SHOW_UNDER_CONSTRUCTION = true
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -23,6 +26,11 @@ export const metadata: Metadata = {
   title: "TradeMad - Premium Wood Products Catalog",
   description: "Discover our exquisite collection of premium wood products",
   generator: "v0.app",
+  icons: {
+    icon: "/images/favicon-trademad.png",
+    shortcut: "/images/favicon-trademad.png",
+    apple: "/images/favicon-trademad.png",
+  },
 }
 
 export default function RootLayout({
@@ -33,9 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased">
+        <BodyBackgroundActivator />
         <ThemeProvider>
           <LanguageProvider>
-            <UnderConstructionBanner />
+            {SHOW_UNDER_CONSTRUCTION && <UnderConstructionBanner />}
             {children}
           </LanguageProvider>
         </ThemeProvider>
