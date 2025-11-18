@@ -1,10 +1,52 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { Hammer, Download, Navigation } from "lucide-react";
 
 export function UnderConstructionBanner() {
   const { t } = useLanguage();
+  const [visible, setVisible] = useState(true);
+  const clickCountRef = useRef(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleSecretTap = useCallback(() => {
+    clickCountRef.current += 1;
+
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    if (clickCountRef.current >= 3) {
+      setVisible(false);
+      clickCountRef.current = 0;
+      return;
+    }
+
+    timerRef.current = setTimeout(() => {
+      clickCountRef.current = 0;
+    }, 800);
+  }, []);
+
+  const handleBadgeClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      event.stopPropagation();
+      handleSecretTap();
+    },
+    [handleSecretTap]
+  );
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, []);
+
+  if (!visible) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
@@ -59,10 +101,14 @@ export function UnderConstructionBanner() {
 
       <div className="absolute inset-x-0 top-20 bottom-4 flex items-center justify-center px-5 sm:px-6">
         <div className="pointer-events-auto w-full max-w-md mx-auto sm:max-w-3xl">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-primary shadow-lg backdrop-blur-sm animate-bounce-slow sm:text-xs">
+          <button
+            type="button"
+            onClick={handleBadgeClick}
+            className="mx-auto inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-3.5 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-primary shadow-lg backdrop-blur-sm animate-bounce-slow sm:text-xs"
+          >
             <Hammer className="h-4 w-4" aria-hidden="true" />
             <span>{t("underConstruction.badge")}</span>
-          </div>
+          </button>
 
           <div className="relative mt-3 rounded-3xl border border-primary/30 bg-card/90 dark:bg-card/85 p-3.5 shadow-2xl backdrop-blur-2xl animate-scale-in sm:mx-auto sm:p-6">
             <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/70 to-transparent opacity-60" />

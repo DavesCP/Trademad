@@ -30,9 +30,9 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Side */}
           <div className="relative animate-slide-in-left">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
@@ -42,7 +42,7 @@ export function AboutSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 rounded-2xl -z-10" />
+            <div className="absolute -bottom-6 right-6 w-40 h-40 bg-primary/10 rounded-2xl -z-10 hidden md:block" />
           </div>
 
           {/* Content Side */}
@@ -56,7 +56,7 @@ export function AboutSection() {
             </div>
 
             {/* Values Grid */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 sm:pt-8">
               {values.map((value, index) => (
                 <div
                   key={index}
