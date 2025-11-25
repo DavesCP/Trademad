@@ -74,7 +74,7 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-serif font-bold text-foreground text-xl sm:text-2xl">TradeMad</span>
+              <span className="font-bold text-foreground text-xl sm:text-2xl">TradeMad Brasil</span>
               <span className="uppercase tracking-[0.2em] text-muted-foreground text-[0.55rem] sm:text-xs">
                 international timber trade
               </span>

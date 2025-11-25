@@ -15,8 +15,13 @@ type Product = {
   nameKey: string
   categoryKey: string
   images: string[]
+  speciesImages?: {
+    softwood?: string[]
+    hardwood?: string[]
+  }
   descriptionKey: string
   species: Array<"softwood" | "hardwood">
+  availability: "cutToSize" | "underRequest"
   specificationsKeys: {
     dimensions: string
     material: string
@@ -24,71 +29,131 @@ type Product = {
   }
 }
 
+const edgeGluedPanelImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg",
+]
+
+const roundGluedPanelImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg",
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg",
+]
+
+const flatJambImages = [
+  "/images/Flat Jambs/IMG-20251017-WA0020.jpg",
+  "/images/Flat Jambs/IMG-20251017-WA0053.jpg",
+]
+
+const moldingImages = [
+  "/images/Moldings/IMG-20240921-WA0015.jpg",
+  "/images/Moldings/IMG-20241104-WA0106.jpg",
+]
+
+const scantlingSoftwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0022.jpg"]
+const scantlingHardwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0034.jpg"]
+const scantlingImages = [...scantlingSoftwoodImages, ...scantlingHardwoodImages]
+
+const stakeSoftwoodImages = [
+  "/images/Pine Lumber/IMG-20250506-WA0023.jpg",
+  "/images/Pine Lumber/IMG-20250807-WA0031.jpg",
+]
+
+const stakeHardwoodImages = ["/images/Eucalyptus Lumber/IMG-20251017-WA0024.jpg"]
+
+const lumberSoftwoodImages = [
+  "/images/Pine Lumber/IMG-20251017-WA0036.jpg",
+  "/images/Pine Lumber/IMG-20251009-WA0082.jpg",
+  "/images/Pine Lumber/IMG-20251017-WA0014.jpg",
+  "/images/Pine Lumber/IMG-20251017-WA0021.jpg",
+]
+
+const lumberHardwoodImages = ["/images/Eucalyptus Lumber/IMG-20251017-WA0042.jpg"]
+
+const plywoodImages = [
+  "/images/Plywood OSB - CDX/IMG-20250221-WA0027.jpg",
+  "/images/Plywood OSB - CDX/IMG-20250617-WA0077.jpg",
+  "/images/Plywood OSB - CDX/IMG-20250221-WA0025.jpg",
+  "/images/Plywood OSB - CDX/IMG-20251017-WA0030.jpg",
+]
+
+const woodChipsSoftwoodImages = ["/images/Logs - Chips/IMG-20251017-WA0012.jpg"]
+const woodChipsHardwoodImages = [
+  "/images/Logs - Chips/IMG-20251017-WA0035.jpg",
+  "/images/Logs - Chips/IMG-20251017-WA0013.jpg",
+]
+
 const products: Product[] = [
   {
     id: "1",
-    nameKey: "products.items.plywoodOsbCdx.name",
-    categoryKey: "products.items.plywoodOsbCdx.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250221-WA0025-NULYUrrL3VHB1joFUY2lDQ9kj2n85m.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0030-CF2OfzLuhNuxlg5hcMgNrc6nTQBumV.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250221-WA0027-nnbpatzv8q4FadqjPzfifOguxEEC34.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250617-WA0077-tNZKE1X4LHRmTTg45FY1JP4kWsWOod.jpg",
-    ],
-    descriptionKey: "products.items.plywoodOsbCdx.description",
-    species: ["softwood"],
+    nameKey: "products.items.edgeGluedPanels.name",
+    categoryKey: "products.items.edgeGluedPanels.category",
+    images: edgeGluedPanelImages,
+    speciesImages: {
+      softwood: edgeGluedPanelImages,
+      hardwood: edgeGluedPanelImages,
+    },
+    descriptionKey: "products.items.edgeGluedPanels.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.plywoodOsbCdx.dimensions",
-      material: "products.items.plywoodOsbCdx.material",
-      finish: "products.items.plywoodOsbCdx.finish",
+      dimensions: "products.items.edgeGluedPanels.dimensions",
+      material: "products.items.edgeGluedPanels.material",
+      finish: "products.items.edgeGluedPanels.finish",
     },
   },
   {
     id: "2",
-    nameKey: "products.items.pineEucalyptusScantling.name",
-    categoryKey: "products.items.pineEucalyptusScantling.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0034-CQPuQpmpX40P6zTHIcBKRGOFpz1oCp.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0022-uYGA3PgRqENNykZlItoEM32NBdcubw.jpg",
-    ],
-    descriptionKey: "products.items.pineEucalyptusScantling.description",
+    nameKey: "products.items.roundGluedPanels.name",
+    categoryKey: "products.items.roundGluedPanels.category",
+    images: roundGluedPanelImages,
+    speciesImages: {
+      softwood: roundGluedPanelImages,
+      hardwood: roundGluedPanelImages,
+    },
+    descriptionKey: "products.items.roundGluedPanels.description",
     species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.pineEucalyptusScantling.dimensions",
-      material: "products.items.pineEucalyptusScantling.material",
-      finish: "products.items.pineEucalyptusScantling.finish",
+      dimensions: "products.items.roundGluedPanels.dimensions",
+      material: "products.items.roundGluedPanels.material",
+      finish: "products.items.roundGluedPanels.finish",
     },
   },
   {
     id: "3",
-    nameKey: "products.items.pineLumber.name",
-    categoryKey: "products.items.pineLumber.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251009-WA0082-8iR3eL5VaKV916EojoeTUuX2ZqqoZT.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0021-KtCNmdmg3Nfuvq9818YuhGE24W0VKh.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250807-WA0031-6pHSr8WcYTezvjsbSpjwz8M1p8rD33.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250506-WA0023-aSypfAdlofwQAbebFrqu9aHbhKvxnB.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0014-kzB5NiFoq2Upv5zyUxrK9bCw08uz3U.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0036-BgXTHqXmwllEXA0utfyYklaDaGkkSL.jpg",
-    ],
-    descriptionKey: "products.items.pineLumber.description",
-    species: ["softwood"],
+    nameKey: "products.items.flatJambs.name",
+    categoryKey: "products.items.flatJambs.category",
+    images: flatJambImages,
+    speciesImages: {
+      softwood: flatJambImages,
+      hardwood: flatJambImages,
+    },
+    descriptionKey: "products.items.flatJambs.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.pineLumber.dimensions",
-      material: "products.items.pineLumber.material",
-      finish: "products.items.pineLumber.finish",
+      dimensions: "products.items.flatJambs.dimensions",
+      material: "products.items.flatJambs.material",
+      finish: "products.items.flatJambs.finish",
     },
   },
   {
     id: "4",
     nameKey: "products.items.moldings.name",
     categoryKey: "products.items.moldings.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20240921-WA0015-O8C1V3x6ApLIc5jRNUzb4MAyah3ioZ.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20241104-WA0106-9Jv2U4xLVOwdV9JqB4dQnrgToUzCzM.jpg",
-    ],
+    images: moldingImages,
+    speciesImages: {
+      softwood: moldingImages,
+      hardwood: moldingImages,
+    },
     descriptionKey: "products.items.moldings.description",
-    species: ["softwood"],
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
       dimensions: "products.items.moldings.dimensions",
       material: "products.items.moldings.material",
@@ -97,70 +162,92 @@ const products: Product[] = [
   },
   {
     id: "5",
-    nameKey: "products.items.logsChips.name",
-    categoryKey: "products.items.logsChips.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0013-d1OSOwofQ3RqWaZcrMSMYaTMkFZBcG.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0035-yEnreJojqJaDdul72URO4TCwfMdokk.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0012-hEvTADVjKwy1lmnx1y9WjKIzQ9125R.jpg",
-    ],
-    descriptionKey: "products.items.logsChips.description",
+    nameKey: "products.items.scantling.name",
+    categoryKey: "products.items.scantling.category",
+    images: scantlingImages,
+    speciesImages: {
+      softwood: scantlingSoftwoodImages,
+      hardwood: scantlingHardwoodImages,
+    },
+    descriptionKey: "products.items.scantling.description",
     species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.logsChips.dimensions",
-      material: "products.items.logsChips.material",
-      finish: "products.items.logsChips.finish",
+      dimensions: "products.items.scantling.dimensions",
+      material: "products.items.scantling.material",
+      finish: "products.items.scantling.finish",
     },
   },
   {
     id: "6",
-    nameKey: "products.items.flatJambs.name",
-    categoryKey: "products.items.flatJambs.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0020-BljA5P1nA66h4Uk6MylD7V7weJoVWu.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0053-6cCvYZkIHuG0hoAbD0daAErH77LTqp.jpg",
-    ],
-    descriptionKey: "products.items.flatJambs.description",
-    species: ["softwood"],
+    nameKey: "products.items.stakeLumber.name",
+    categoryKey: "products.items.stakeLumber.category",
+    images: [...stakeSoftwoodImages, ...stakeHardwoodImages],
+    speciesImages: {
+      softwood: stakeSoftwoodImages,
+      hardwood: stakeHardwoodImages,
+    },
+    descriptionKey: "products.items.stakeLumber.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.flatJambs.dimensions",
-      material: "products.items.flatJambs.material",
-      finish: "products.items.flatJambs.finish",
+      dimensions: "products.items.stakeLumber.dimensions",
+      material: "products.items.stakeLumber.material",
+      finish: "products.items.stakeLumber.finish",
     },
   },
   {
     id: "7",
-    nameKey: "products.items.eucalyptusLumber.name",
-    categoryKey: "products.items.eucalyptusLumber.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0042-dw3SY1siiQDPXgs5MeaYzQfQAkf5D4.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20251017-WA0024-svAsTeRO9PnGTz2ifHWGLGtu25Zvqx.jpg",
-    ],
-    descriptionKey: "products.items.eucalyptusLumber.description",
-    species: ["hardwood"],
+    nameKey: "products.items.lumber.name",
+    categoryKey: "products.items.lumber.category",
+    images: [...lumberSoftwoodImages, ...lumberHardwoodImages],
+    speciesImages: {
+      softwood: lumberSoftwoodImages,
+      hardwood: lumberHardwoodImages,
+    },
+    descriptionKey: "products.items.lumber.description",
+    species: ["softwood", "hardwood"],
+    availability: "cutToSize",
     specificationsKeys: {
-      dimensions: "products.items.eucalyptusLumber.dimensions",
-      material: "products.items.eucalyptusLumber.material",
-      finish: "products.items.eucalyptusLumber.finish",
+      dimensions: "products.items.lumber.dimensions",
+      material: "products.items.lumber.material",
+      finish: "products.items.lumber.finish",
     },
   },
   {
     id: "8",
-    nameKey: "products.items.edgeGluedPanels.name",
-    categoryKey: "products.items.edgeGluedPanels.category",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250522-WA0100-sYdizk27Ya5DO01wckjh7ImtlikxQ7.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250904-WA0162-8JshNwdtwEXe6tXe0TGtpdFgx5r39M.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250904-WA0164-g3biKgDmMNLpT7KrlLt46BYXLDVOVO.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250930-WA0019-SFyuuLN9ZWTUbL2PjgJ5djrNAByEIr.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20250925-WA0084-6yedzRnSc4t2171dzBntZP8q2p2BPf.jpg",
-    ],
-    descriptionKey: "products.items.edgeGluedPanels.description",
+    nameKey: "products.items.plywoodOsbCdx.name",
+    categoryKey: "products.items.plywoodOsbCdx.category",
+    images: plywoodImages,
+    speciesImages: {
+      softwood: plywoodImages,
+      hardwood: plywoodImages,
+    },
+    descriptionKey: "products.items.plywoodOsbCdx.description",
     species: ["softwood", "hardwood"],
+    availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.edgeGluedPanels.dimensions",
-      material: "products.items.edgeGluedPanels.material",
-      finish: "products.items.edgeGluedPanels.finish",
+      dimensions: "products.items.plywoodOsbCdx.dimensions",
+      material: "products.items.plywoodOsbCdx.material",
+      finish: "products.items.plywoodOsbCdx.finish",
+    },
+  },
+  {
+    id: "9",
+    nameKey: "products.items.logsChips.name",
+    categoryKey: "products.items.logsChips.category",
+    images: [...woodChipsSoftwoodImages, ...woodChipsHardwoodImages],
+    speciesImages: {
+      softwood: woodChipsSoftwoodImages,
+      hardwood: woodChipsHardwoodImages,
+    },
+    descriptionKey: "products.items.logsChips.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.logsChips.dimensions",
+      material: "products.items.logsChips.material",
+      finish: "products.items.logsChips.finish",
     },
   },
 ]
@@ -175,6 +262,30 @@ export function ProductGrid() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [activeFilters, setActiveFilters] = useState<Array<"softwood" | "hardwood">>([])
   const { t } = useLanguage()
+
+  const preferredSpecies: "softwood" | "hardwood" | null =
+    activeFilters.length === 1 ? activeFilters[0] : null
+
+  const getDisplayedImages = (product: Product) => {
+    if (preferredSpecies && product.speciesImages?.[preferredSpecies]?.length) {
+      return product.speciesImages[preferredSpecies]!
+    }
+
+    if (!preferredSpecies && product.images.length) {
+      return product.images
+    }
+
+    const combinedImages = [
+      ...(product.speciesImages?.softwood ?? []),
+      ...(product.speciesImages?.hardwood ?? []),
+    ]
+
+    if (combinedImages.length) {
+      return combinedImages
+    }
+
+    return product.images
+  }
 
   const filters = [
     {
@@ -245,47 +356,54 @@ export function ProductGrid() {
           </div>
 
           {/* Product Grid */}
-          {/* Product Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product, index) => (
-              <Card
-                key={product.id}
-                className="group overflow-hidden rounded-3xl border border-border/40 bg-white/95 dark:bg-card/95 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.12)] transition-all duration-300 animate-scale-in cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => setSelectedProduct(product)}
-              >
-                {/* Product Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-200/40 dark:bg-neutral-800/60">
-                  <img
-                    src={product.images[0] || "/placeholder.svg"}
-                    alt={t(product.nameKey)}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            {filteredProducts.map((product, index) => {
+              const displayedImages = getDisplayedImages(product)
+              const mainImage = displayedImages[0] || "/placeholder.svg"
 
-                  {/* View Button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="lg" className="rounded-full">
-                      <Eye className="mr-2 h-5 w-5" />
-                      {t("products.viewDetails")}
-                    </Button>
+              return (
+                <Card
+                  key={product.id}
+                  className="group overflow-hidden rounded-3xl border border-border/40 bg-white/95 dark:bg-card/95 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.12)] transition-all duration-300 animate-scale-in cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => setSelectedProduct({ ...product, images: displayedImages })}
+                >
+                  {/* Product Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-neutral-200/40 dark:bg-neutral-800/60">
+                    <img
+                      src={mainImage}
+                      alt={t(product.nameKey)}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* View Button */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Button size="lg" className="rounded-full">
+                        <Eye className="mr-2 h-5 w-5" />
+                        {t("products.viewDetails")}
+                      </Button>
+                    </div>
+
+                    {/* Category Badge */}
+                    <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
+                      {t(product.categoryKey)}
+                    </Badge>
                   </div>
 
-                  {/* Category Badge */}
-                  <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                    {t(product.categoryKey)}
-                  </Badge>
-                </div>
-
-                {/* Product Info */}
-                <div className="p-6 space-y-2">
-                  <h3 className="font-serif text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {t(product.nameKey)}
-                  </h3>
-                  <p className="text-muted-foreground line-clamp-3 leading-relaxed">{t(product.descriptionKey)}</p>
-                </div>
-              </Card>
-            ))}
+                  {/* Product Info */}
+                  <div className="p-6 space-y-2">
+                    <h3 className="font-serif text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {t(product.nameKey)}
+                    </h3>
+                    <div className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-primary">
+                      {t(`products.availability.${product.availability}`)}
+                    </div>
+                    <p className="text-muted-foreground line-clamp-3 leading-relaxed">{t(product.descriptionKey)}</p>
+                  </div>
+                </Card>
+              )
+            })}
           </div>
 
           {/* Catalog CTA */}
