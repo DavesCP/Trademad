@@ -1,8 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
@@ -22,74 +19,39 @@ export function ContactSection() {
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8 animate-slide-in-left">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t("contact.email")}</h3>
-                  <a
-                    href="mailto:marcos@trademad.com.br"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    marcos@trademad.com.br
-                  </a>
-                </div>
+          <div className="grid md:grid-cols-3 gap-12 animate-slide-in-up">
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:shadow-md transition-all duration-300">
+                <Mail className="h-7 w-7 text-primary" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t("contact.phone")}</h3>
-                  <a href="tel:+5547991010050" className="text-muted-foreground hover:text-primary transition-colors">
-                    +55 47 9910-1050
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t("contact.location")}</h3>
-                  <p className="text-muted-foreground">Rua Peterson André Machado, 103 - Apto 00140</p>
-                </div>
-              </div>
-
-              {/* Decorative Image */}
-              <div className="hidden lg:block aspect-video rounded-xl overflow-hidden mt-8">
-                <img
-                  src="/wood-manufacturing-facility.jpg"
-                  alt={t("contact.imageAlt")}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-3">{t("contact.email")}</h3>
+              <a
+                href="mailto:marcos@trademad.com.br"
+                className="text-lg text-muted-foreground hover:text-primary transition-colors"
+              >
+                marcos@trademad.com.br
+              </a>
             </div>
 
-            {/* Contact Form */}
-            <form className="space-y-6 animate-slide-in-right">
-              <div>
-                <Input placeholder={t("contact.form.name")} className="h-12" />
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:shadow-md transition-all duration-300">
+                <Phone className="h-7 w-7 text-primary" />
               </div>
-              <div>
-                <Input type="email" placeholder={t("contact.form.email")} className="h-12" />
+              <h3 className="font-serif text-xl font-bold text-foreground mb-3">{t("contact.phone")}</h3>
+              <a href="tel:+5547991010050" className="text-lg text-muted-foreground hover:text-primary transition-colors">
+                +55 47 9910-1050
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:shadow-md transition-all duration-300">
+                <MapPin className="h-7 w-7 text-primary" />
               </div>
-              <div>
-                <Input placeholder={t("contact.form.subject")} className="h-12" />
-              </div>
-              <div>
-                <Textarea placeholder={t("contact.form.message")} rows={6} />
-              </div>
-              <Button size="lg" className="w-full rounded-full">
-                {t("contact.form.send")}
-              </Button>
-            </form>
+              <h3 className="font-serif text-xl font-bold text-foreground mb-3">{t("contact.location")}</h3>
+              <p className="text-lg text-muted-foreground max-w-[250px]">
+                Rua Peterson André Machado, 103 - Apto 00140
+              </p>
+            </div>
           </div>
         </div>
       </div>

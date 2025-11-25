@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Download, Leaf } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
@@ -13,12 +14,23 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">TM</span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
+                <Image
+                  src="/images/favicon-trademad.png"
+                  alt="TradeMad mark"
+                  fill
+                  sizes="48px"
+                  className="object-contain drop-shadow-lg"
+                />
               </div>
-              <span className="font-serif text-2xl font-bold">TradeMad</span>
-            </div>
+              <div className="flex flex-col leading-tight">
+                <span className="font-bold text-xl sm:text-2xl">TradeMad Brasil</span>
+                <span className="uppercase tracking-[0.2em] text-[0.55rem] sm:text-xs opacity-80">
+                  international timber trade
+                </span>
+              </div>
+            </Link>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">{t("footer.brandDescription")}</p>
             <a
               href="/files/catalogo-trademad.pdf"

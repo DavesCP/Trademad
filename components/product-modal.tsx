@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
@@ -12,6 +13,7 @@ type Product = {
   categoryKey: string
   images: string[]
   descriptionKey: string
+  availability?: "cutToSize" | "underRequest"
   specificationsKeys: {
     dimensions: string
     material: string
@@ -64,8 +66,13 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
       }}
     >
       <DialogContent className="w-full max-w-[95vw] sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl max-h-[90vh] overflow-y-auto p-0">
-        <DialogHeader className="p-4 sm:p-6 pb-0">
+        <DialogHeader className="p-4 sm:p-6 pb-0 space-y-2">
           <DialogTitle className="font-serif text-2xl sm:text-3xl text-foreground">{t(product.nameKey)}</DialogTitle>
+          {product.availability && (
+            <Badge variant="outline" className="uppercase tracking-[0.3em] text-xs">
+              {t(`products.availability.${product.availability}`)}
+            </Badge>
+          )}
         </DialogHeader>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 p-4 sm:p-6">
