@@ -92,16 +92,35 @@ export function HeroSection() {
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" className="text-lg px-8 py-6 rounded-full border-0 bg-primary text-primary-foreground shadow-[0_15px_45px_rgba(15,23,42,0.25)] transition-all hover:bg-primary/85 focus-visible:ring-primary/70" asChild>
-                <a href="/files/catalogo-trademad.pdf" target="_blank" rel="noopener noreferrer">
-                  {t("hero.catalogCta")}
-                  <Download className="ml-2 h-5 w-5" />
-                </a>
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 rounded-full border-0 bg-primary text-primary-foreground shadow-[0_15px_45px_rgba(15,23,42,0.25)] transition-all hover:bg-primary/85 focus-visible:ring-primary/70"
+                onClick={async () => {
+                  try {
+                    const response = await fetch('/files/catalogo-trademad.pdf')
+                    if (!response.ok) throw new Error('PDF não encontrado')
+                    const blob = await response.blob()
+                    const url = window.URL.createObjectURL(blob)
+                    const link = document.createElement('a')
+                    link.href = url
+                    link.download = 'catalogo-trademad.pdf'
+                    document.body.appendChild(link)
+                    link.click()
+                    document.body.removeChild(link)
+                    window.URL.revokeObjectURL(url)
+                  } catch (error) {
+                    console.error('Erro ao baixar PDF:', error)
+                    window.open('/files/catalogo-trademad.pdf', '_blank')
+                  }
+                }}
+              >
+                {t("hero.catalogCta")}
+                <Download className="ml-2 h-5 w-5" />
               </Button>
             </div>
             <p className="mt-4 flex items-center justify-center gap-2 text-sm text-white/80 dark:text-muted-foreground">
-              <Download className="h-4 w-4" />
-              {t("hero.catalogTag")}
+              <Download className="h-4 w-4 flex-shrink-0" />
+              <span className="text-center">{t("hero.catalogTag")}</span>
             </p>
           </div>
 

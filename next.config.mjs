@@ -7,6 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // necessário para export
   },
+  trailingSlash: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 export default nextConfig;

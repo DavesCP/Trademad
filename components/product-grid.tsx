@@ -29,63 +29,101 @@ type Product = {
   }
 }
 
-const edgeGluedPanelImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg",
+// Edge Glued Panels - separating by species
+const edgeGluedPanelSoftwoodImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg", // pinho
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg", // pinho
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg", // pinho
 ]
 
-const roundGluedPanelImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg",
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg",
+const edgeGluedPanelHardwoodImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg", // eucalipto
 ]
 
-const flatJambImages = [
-  "/images/Flat Jambs/IMG-20251017-WA0020.jpg",
-  "/images/Flat Jambs/IMG-20251017-WA0053.jpg",
+const edgeGluedPanelImages = [...edgeGluedPanelSoftwoodImages, ...edgeGluedPanelHardwoodImages]
+
+// Round Glued Panels - separating by species
+const roundGluedPanelSoftwoodImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg", // pinho
 ]
 
-const moldingImages = [
-  "/images/Moldings/IMG-20240921-WA0015.jpg",
-  "/images/Moldings/IMG-20241104-WA0106.jpg",
+const roundGluedPanelHardwoodImages = [
+  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg", // eucalipto (reusing)
 ]
 
-const scantlingSoftwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0022.jpg"]
-const scantlingHardwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0034.jpg"]
+const roundGluedPanelImages = [...roundGluedPanelSoftwoodImages, ...roundGluedPanelHardwoodImages]
+
+
+// Moldings - separating by species
+const moldingSoftwoodImages = [
+  "/images/Moldings/IMG-20240921-WA0015.jpg", // pinho
+]
+
+const moldingHardwoodImages = [
+  "/images/Moldings/IMG-20241104-WA0106.jpg", // eucalipto
+]
+
+const moldingImages = [...moldingSoftwoodImages, ...moldingHardwoodImages]
+
+// Flat Jambs - separating by species
+const flatJambSoftwoodImages = [
+  "/images/Flat Jambs/IMG-20251017-WA0020.jpg", // pinho
+]
+
+const flatJambHardwoodImages = [
+  "/images/Flat Jambs/IMG-20251017-WA0053.jpg", // eucalipto
+]
+
+const flatJambImages = [...flatJambSoftwoodImages, ...flatJambHardwoodImages]
+
+// Scantling - separating by species (corrigido conforme especificação)
+const scantlingSoftwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0034.jpg"] // pinho
+const scantlingHardwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0022.jpg"] // eucalipto
 const scantlingImages = [...scantlingSoftwoodImages, ...scantlingHardwoodImages]
 
-const stakeSoftwoodImages = [
-  "/images/Pine Lumber/IMG-20250506-WA0023.jpg",
-  "/images/Pine Lumber/IMG-20250807-WA0031.jpg",
+// Stake Lumber - separating by species
+const stakeLumberSoftwoodImages = [
+  "/images/Pine Lumber/IMG-20251017-WA0021.jpg", // stake lumber pinho
 ]
 
-const stakeHardwoodImages = ["/images/Eucalyptus Lumber/IMG-20251017-WA0024.jpg"]
+const stakeLumberHardwoodImages = [
+  "/placeholder.jpg", // sem foto específica para stake lumber eucalipto
+]
 
+// Lumber - separating by species (corrigido conforme especificação)
 const lumberSoftwoodImages = [
+  "/images/Pine Lumber/IMG-20250506-WA0023.jpg",
+  "/images/Pine Lumber/IMG-20250807-WA0031.jpg",
   "/images/Pine Lumber/IMG-20251017-WA0036.jpg",
   "/images/Pine Lumber/IMG-20251009-WA0082.jpg",
   "/images/Pine Lumber/IMG-20251017-WA0014.jpg",
-  "/images/Pine Lumber/IMG-20251017-WA0021.jpg",
 ]
 
-const lumberHardwoodImages = ["/images/Eucalyptus Lumber/IMG-20251017-WA0042.jpg"]
-
-const plywoodImages = [
-  "/images/Plywood OSB - CDX/IMG-20250221-WA0027.jpg",
-  "/images/Plywood OSB - CDX/IMG-20250617-WA0077.jpg",
-  "/images/Plywood OSB - CDX/IMG-20250221-WA0025.jpg",
-  "/images/Plywood OSB - CDX/IMG-20251017-WA0030.jpg",
+const lumberHardwoodImages = [
+  "/images/Eucalyptus Lumber/IMG-20251017-WA0024.jpg",
+  "/images/Eucalyptus Lumber/IMG-20251017-WA0042.jpg",
 ]
 
-const woodChipsSoftwoodImages = ["/images/Logs - Chips/IMG-20251017-WA0012.jpg"]
-const woodChipsHardwoodImages = [
-  "/images/Logs - Chips/IMG-20251017-WA0035.jpg",
-  "/images/Logs - Chips/IMG-20251017-WA0013.jpg",
+// Plywood - separating by species and type (corrigido conforme especificação)
+const plywoodSoftwoodImages = [
+  "/images/Plywood OSB - CDX/IMG-20251017-WA0030.jpg", // CDX pinho
+  "/images/Plywood OSB - CDX/IMG-20250221-WA0027.jpg", // OSB pinho
 ]
+
+const plywoodHardwoodImages = [
+  "/images/Plywood OSB - CDX/IMG-20250617-WA0077.jpg", // CDX eucalipto
+  "/images/Plywood OSB - CDX/IMG-20250221-WA0025.jpg", // OSB eucalipto
+]
+
+const plywoodImages = [...plywoodSoftwoodImages, ...plywoodHardwoodImages]
+
+// Logs & Chips - categoria isolada (não remete a soft/hard específico)
+const logsChipsImages = [
+  "/images/Logs - Chips/IMG-20251017-WA0035.jpg", // logs
+  "/images/Logs - Chips/IMG-20251017-WA0012.jpg", // chips
+  "/images/Logs - Chips/IMG-20251017-WA0013.jpg", // chips
+]
+
 
 const products: Product[] = [
   {
@@ -94,8 +132,8 @@ const products: Product[] = [
     categoryKey: "products.items.edgeGluedPanels.category",
     images: edgeGluedPanelImages,
     speciesImages: {
-      softwood: edgeGluedPanelImages,
-      hardwood: edgeGluedPanelImages,
+      softwood: edgeGluedPanelSoftwoodImages,
+      hardwood: edgeGluedPanelHardwoodImages,
     },
     descriptionKey: "products.items.edgeGluedPanels.description",
     species: ["softwood", "hardwood"],
@@ -112,8 +150,8 @@ const products: Product[] = [
     categoryKey: "products.items.roundGluedPanels.category",
     images: roundGluedPanelImages,
     speciesImages: {
-      softwood: roundGluedPanelImages,
-      hardwood: roundGluedPanelImages,
+      softwood: roundGluedPanelSoftwoodImages,
+      hardwood: roundGluedPanelHardwoodImages,
     },
     descriptionKey: "products.items.roundGluedPanels.description",
     species: ["softwood", "hardwood"],
@@ -130,8 +168,8 @@ const products: Product[] = [
     categoryKey: "products.items.flatJambs.category",
     images: flatJambImages,
     speciesImages: {
-      softwood: flatJambImages,
-      hardwood: flatJambImages,
+      softwood: flatJambSoftwoodImages,
+      hardwood: flatJambHardwoodImages,
     },
     descriptionKey: "products.items.flatJambs.description",
     species: ["softwood", "hardwood"],
@@ -148,8 +186,8 @@ const products: Product[] = [
     categoryKey: "products.items.moldings.category",
     images: moldingImages,
     speciesImages: {
-      softwood: moldingImages,
-      hardwood: moldingImages,
+      softwood: moldingSoftwoodImages,
+      hardwood: moldingHardwoodImages,
     },
     descriptionKey: "products.items.moldings.description",
     species: ["softwood", "hardwood"],
@@ -182,10 +220,10 @@ const products: Product[] = [
     id: "6",
     nameKey: "products.items.stakeLumber.name",
     categoryKey: "products.items.stakeLumber.category",
-    images: [...stakeSoftwoodImages, ...stakeHardwoodImages],
+    images: [...stakeLumberSoftwoodImages, ...stakeLumberHardwoodImages],
     speciesImages: {
-      softwood: stakeSoftwoodImages,
-      hardwood: stakeHardwoodImages,
+      softwood: stakeLumberSoftwoodImages,
+      hardwood: stakeLumberHardwoodImages,
     },
     descriptionKey: "products.items.stakeLumber.description",
     species: ["softwood", "hardwood"],
@@ -220,8 +258,8 @@ const products: Product[] = [
     categoryKey: "products.items.plywoodOsbCdx.category",
     images: plywoodImages,
     speciesImages: {
-      softwood: plywoodImages,
-      hardwood: plywoodImages,
+      softwood: plywoodSoftwoodImages,
+      hardwood: plywoodHardwoodImages,
     },
     descriptionKey: "products.items.plywoodOsbCdx.description",
     species: ["softwood", "hardwood"],
@@ -236,10 +274,10 @@ const products: Product[] = [
     id: "9",
     nameKey: "products.items.logsChips.name",
     categoryKey: "products.items.logsChips.category",
-    images: [...woodChipsSoftwoodImages, ...woodChipsHardwoodImages],
+    images: logsChipsImages,
     speciesImages: {
-      softwood: woodChipsSoftwoodImages,
-      hardwood: woodChipsHardwoodImages,
+      softwood: logsChipsImages,
+      hardwood: logsChipsImages,
     },
     descriptionKey: "products.items.logsChips.description",
     species: ["softwood", "hardwood"],
@@ -432,11 +470,30 @@ export function ProductGrid() {
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                     {t("catalogSection.secondary")}
                   </p>
-                  <Button size="lg" className="rounded-full px-10 py-6 text-base shadow-[0_15px_45px_rgba(15,23,42,0.25)]" asChild>
-                    <a href="/files/catalogo-trademad.pdf" target="_blank" rel="noopener noreferrer">
-                      {t("catalogSection.cta")}
-                      <FileDown className="ml-2 h-5 w-5" />
-                    </a>
+                  <Button 
+                    size="lg" 
+                    className="rounded-full px-10 py-6 text-base shadow-[0_15px_45px_rgba(15,23,42,0.25)]"
+                    onClick={async () => {
+                      try {
+                        const response = await fetch('/files/catalogo-trademad.pdf')
+                        if (!response.ok) throw new Error('PDF não encontrado')
+                        const blob = await response.blob()
+                        const url = window.URL.createObjectURL(blob)
+                        const link = document.createElement('a')
+                        link.href = url
+                        link.download = 'catalogo-trademad.pdf'
+                        document.body.appendChild(link)
+                        link.click()
+                        document.body.removeChild(link)
+                        window.URL.revokeObjectURL(url)
+                      } catch (error) {
+                        console.error('Erro ao baixar PDF:', error)
+                        window.open('/files/catalogo-trademad.pdf', '_blank')
+                      }
+                    }}
+                  >
+                    {t("catalogSection.cta")}
+                    <FileDown className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
 

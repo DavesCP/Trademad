@@ -79,7 +79,7 @@
 					"category": "Veneers & Components",
 					"description": "Premium flat door and window jambs made from high-quality pine. Available in laminated, primed, or raw finishes to suit your project needs. Smooth planed surfaces with natural wood grain, perfect for interior door frames, window casings, and architectural trim.",
 					"dimensions": "Various widths and lengths",
-					"material": "Pine Wood",
+					"material": "Pine & Eucalyptus Wood",
 					"finish": "Laminated, Primed, or Raw"
 				},
 				"moldings": {
@@ -87,7 +87,7 @@
 					"category": "Veneers & Components",
 					"description": "Precision-milled pine mouldings for interior finishing. Available in various profiles including baseboards, crown moulding, door and window casings, and decorative trim. Pre-finished options available in laminated, primed, or raw finishes for custom applications.",
 					"dimensions": "Various profiles and lengths",
-					"material": "Pine Wood",
+					"material": "Pine & Eucalyptus Wood",
 					"finish": "Laminated, Primed, or Raw"
 				},
 				"scantling": {
@@ -123,12 +123,12 @@
 					"finish": "Structural & Sheathing Grades"
 				},
 				"logsChips": {
-					"name": "Wood Chips",
+					"name": "Logs & Wood Chips",
 					"category": "Raw Material Supply",
-					"description": "Clean pine and eucalyptus wood chips screened for biomass, pulp, MDF, landscaping, and animal bedding applications. Supplied in bulk lots with controlled humidity for consistent performance.",
-					"dimensions": "Bulk volumes | Custom chip gradations",
-					"material": "Pine & Eucalyptus Wood Chips",
-					"finish": "Screened / Dried"
+					"description": "Sustainably harvested eucalyptus and pine logs and wood chips for industrial applications. Logs are ready for processing into lumber or veneer. Wood chips are ideal for biomass energy, pulp production, landscaping, and animal bedding. Available in bulk quantities.",
+					"dimensions": "Logs: Various diameters | Chips: Industrial grade",
+					"material": "Eucalyptus & Pine",
+					"finish": "Natural Raw Material"
 				}
 			}
 		},
@@ -374,12 +374,12 @@
 					"finish": "Graus Estruturais e Revestimento"
 				},
 				"logsChips": {
-					"name": "Cavacos de Madeira",
+					"name": "Toras e Cavacos de Madeira",
 					"category": "Fornecimento de Matéria-Prima",
-					"description": "Cavacos limpos de pinho e eucalipto, peneirados para biomassa, polpa, MDF, paisagismo e cama animal. Entregues a granel com controle de umidade e consistência dimensional.",
-					"dimensions": "Volumes a granel | Graduações personalizadas",
-					"material": "Cavacos de Pinho e Eucalipto",
-					"finish": "Peneirado / Seco"
+					"description": "Toras e cavacos de eucalipto e pinho colhidos de forma sustentável para aplicações industriais. Toras prontas para processamento em madeira serrada ou lâminas. Cavacos ideais para energia de biomassa, produção de celulose, paisagismo e cama de animais. Disponível em quantidades a granel.",
+					"dimensions": "Toras: Vários diâmetros | Cavacos: Grau industrial",
+					"material": "Eucalipto e Pinho",
+					"finish": "Matéria-Prima Natural"
 				}
 			}
 		},
@@ -625,12 +625,12 @@
 					"finish": "Grados Estructurales y de Revestimiento"
 				},
 				"logsChips": {
-					"name": "Astillas de Madera",
+					"name": "Troncos y Astillas de Madera",
 					"category": "Suministro de Materia Prima",
-					"description": "Astillas limpias de pino y eucalipto, cribadas para biomasa, pulpa, MDF, paisajismo y cama animal. Se suministran a granel con control de humedad para garantizar uniformidad.",
-					"dimensions": "Volúmenes a granel | Gradaciones personalizadas",
-					"material": "Astillas de Pino y Eucalipto",
-					"finish": "Cribado / Secado"
+					"description": "Troncos y astillas de eucalipto y pino cosechados de forma sostenible para aplicaciones industriales. Troncos listos para procesamiento en madera aserrada o chapas. Astillas ideales para energía de biomasa, producción de pulpa, paisajismo y cama de animales. Disponible en cantidades a granel.",
+					"dimensions": "Troncos: Varios diámetros | Astillas: Grado industrial",
+					"material": "Eucalipto y Pino",
+					"finish": "Materia Prima Natural"
 				}
 			}
 		},
