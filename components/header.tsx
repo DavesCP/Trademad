@@ -42,7 +42,7 @@ export function Header() {
       const targetElement = document.getElementById(targetId)
 
       if (targetElement) {
-        const headerOffset = 80 // altura do header fixo
+        const headerOffset = 96 // altura do header fixo
         const elementPosition = targetElement.getBoundingClientRect().top
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
@@ -60,9 +60,9 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border flex justify-center">
       <nav className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex flex-col items-center gap-1 group">
             <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:scale-105">
               <Image
                 src="/images/favicon-trademad.png"
@@ -73,14 +73,9 @@ export function Header() {
                 className="object-contain drop-shadow-lg"
               />
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-bold text-foreground text-lg sm:text-xl">
-                TradeMad Brazil
-              </span>
-              <span className="uppercase tracking-[0.2em] text-muted-foreground text-[0.55rem] sm:text-xs">
-                international timber trade
-              </span>
-            </div>
+            <span className="font-sans font-semibold text-foreground text-sm sm:text-base leading-none text-center tracking-wide">
+              TradeMad Brazil
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
