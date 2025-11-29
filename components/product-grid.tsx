@@ -274,8 +274,8 @@ const products: Product[] = [
 
 const catalogPreviewImages = [
   { src: "/images/fotos-catalogo/1.png", className: "lg:-rotate-6 lg:-translate-y-4", alt: "Catalog cover preview" },
-  { src: "/images/fotos-catalogo/5.png", className: "lg:translate-y-3", alt: "Catalog product spread" },
-  { src: "/images/fotos-catalogo/7.png", className: "lg:rotate-6 lg:-translate-y-2", alt: "Catalog hardwood section" },
+  { src: "/images/fotos-catalogo/3.png", className: "lg:translate-y-3", alt: "Catalog product spread" },
+  { src: "/images/fotos-catalogo/5.png", className: "lg:rotate-6 lg:-translate-y-2", alt: "Catalog hardwood section" },
 ]
 
 export function ProductGrid() {
