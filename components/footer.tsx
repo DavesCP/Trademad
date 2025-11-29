@@ -6,7 +6,7 @@ import { Download, Leaf } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 border-t border-border">
@@ -25,7 +25,9 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl sm:text-2xl">TradeMad Brasil</span>
+                <span className="font-bold text-xl sm:text-2xl">
+                  TradeMad Brazil
+                </span>
                 <span className="uppercase tracking-[0.2em] text-[0.55rem] sm:text-xs opacity-80">
                   international timber trade
                 </span>

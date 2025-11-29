@@ -1,6 +1,7 @@
 "use client"
 
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { useLanguage } from "@/lib/language-context"
 
 export function ContactSection() {
@@ -35,10 +36,10 @@ export function ContactSection() {
 
             <div className="flex flex-col items-center text-center group">
               <div className="w-16 h-16 rounded-full bg-background border border-border flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:shadow-md transition-all duration-300">
-                <Phone className="h-7 w-7 text-primary" />
+                <WhatsAppIcon className="h-7 w-7 text-green-600" />
               </div>
               <h3 className="font-serif text-xl font-bold text-foreground mb-3">{t("contact.phone")}</h3>
-              <a href="tel:+5547991010050" className="text-lg text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://wa.me/5547991010050" target="_blank" rel="noopener noreferrer" className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 +55 47 9910-1050
               </a>
             </div>

@@ -53,6 +53,11 @@ export function HeroSection() {
             playsInline
             preload="auto"
             aria-hidden="true"
+            ref={(el) => {
+              if (el) {
+                el.playbackRate = 0.75
+              }
+            }}
             className={cn(
               "absolute inset-0 h-full w-full object-cover motion-safe:transition-opacity motion-safe:duration-1000",
               index === activeVideo ? "opacity-80" : "opacity-0"

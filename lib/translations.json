@@ -13,7 +13,7 @@
 			"catalogCta": "Download Catalog",
 			"catalogTag": "PDF • Latest edition with specs, finishes, and logistics details",
 			"description": {
-				"prefix": "TradeMad Brasil specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced",
+				"prefix": "TradeMad Brazil specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced",
 				"highlight": "pine and eucalyptus",
 				"suffix": "products for global markets."
 			},
@@ -53,27 +53,31 @@
 				"softwood": "Softwood (Pine)",
 				"hardwood": "Hardwood (Eucalyptus)"
 			},
+			"species": {
+				"pine": "Pine",
+				"eucalyptus": "Eucalyptus"
+			},
 			"availability": {
 				"cutToSize": "Cut to size",
 				"underRequest": "Under request"
 			},
 			"items": {
-                "edgeGluedPanels": {
-                    "name": "Edge & Glued Panels",
-                    "category": "Engineered Wood Panels",
-                    "description": "Premium edge-glued solid wood panels combining pine and eucalyptus. Individual strips are precision-joined along their edges to create stable, wide surfaces. Available in finger-jointed or solid configurations. Perfect for tabletops, shelving, cabinet doors, and furniture making with superior dimensional stability.",
-                    "dimensions": "Custom sizes available",
-                    "material": "Pine & Eucalyptus",
-                    "finish": "Finger-Jointed or Solid"
-                },
-                "roundGluedPanels": {
-                    "name": "Round Glued Panels",
-                    "category": "Engineered Wood Panels",
-                    "description": "Circular glued panels manufactured from carefully selected pine and eucalyptus lamellas. Ideal for tabletops, decorative displays, and architectural details requiring symmetrical shapes with excellent stability.",
-                    "dimensions": "Custom diameters available",
-                    "material": "Pine & Eucalyptus",
-                    "finish": "Sanded & Finished"
-                },
+				"edgeGluedPanels": {
+					"name": "Edge Glued Panels",
+					"category": "Engineered Wood Panels",
+					"description": "Premium edge-glued solid wood panels combining pine and eucalyptus. Individual strips are precision-joined along their edges to create stable, wide surfaces. Available in finger-jointed or solid configurations. Perfect for tabletops, shelving, cabinet doors, and furniture making with superior dimensional stability.",
+					"dimensions": "Custom sizes available",
+					"material": "Pine & Eucalyptus",
+					"finish": "Finger-Jointed or Solid"
+				},
+				"roundGluedPanels": {
+					"name": "Round Glued Panels",
+					"category": "Engineered Wood Panels",
+					"description": "Circular glued panels manufactured from carefully selected pine and eucalyptus lamellas. Ideal for tabletops, decorative displays, and architectural details requiring symmetrical shapes with excellent stability.",
+					"dimensions": "Custom diameters available",
+					"material": "Pine & Eucalyptus",
+					"finish": "Sanded & Finished"
+				},
 				"flatJambs": {
 					"name": "Flat Jambs (Raw & Prime)",
 					"category": "Veneers & Components",
@@ -83,7 +87,7 @@
 					"finish": "Laminated, Primed, or Raw"
 				},
 				"moldings": {
-					"name": "Moldings",
+					"name": "Moldings (Raw & Prime)",
 					"category": "Veneers & Components",
 					"description": "Precision-milled pine mouldings for interior finishing. Available in various profiles including baseboards, crown moulding, door and window casings, and decorative trim. Pre-finished options available in laminated, primed, or raw finishes for custom applications.",
 					"dimensions": "Various profiles and lengths",
@@ -115,7 +119,7 @@
 					"finish": "Kiln-Dried & Sawn"
 				},
 				"plywoodOsbCdx": {
-					"name": "Plywood - CDX & OSB",
+					"name": "Plywood",
 					"category": "Engineered Panels",
 					"description": "High-quality Plywood, OSB, and CDX panels for construction and industrial use. Versatile engineered wood solutions offering excellent structural stability and durability for sheathing, flooring, and packaging.",
 					"dimensions": "Multiple sizes available",
@@ -135,7 +139,7 @@
 		"services": {
 			"title": "Our Services",
 			"subtitle": "Complete Solutions for Global Supply and Distribution",
-			"description": "At TradeMad Brasil, we go far beyond wood trading — we deliver complete solutions for global supply and distribution. We specialize in strategic sourcing, product development, and international logistics, supporting our clients throughout every stage of the process — from procurement to delivery.",
+			"description": "At TradeMad Brazil, we go far beyond wood trading — we deliver complete solutions for global supply and distribution. We specialize in strategic sourcing, product development, and international logistics, supporting our clients throughout every stage of the process — from procurement to delivery.",
 			"items": {
 				"logistics": {
 					"title": "International Logistics",
@@ -162,10 +166,10 @@
 					"description": "Advisory in international certifications such as FSC, CARB, and CE, ensuring compliance with global standards and regulations."
 				}
 			},
-			"cta": "From sourcing to final delivery, TradeMad Brasil provides reliable, efficient, and transparent trade operations — connecting South American producers with the world."
+			"cta": "From sourcing to final delivery, TradeMad Brazil provides reliable, efficient, and transparent trade operations — connecting South American producers with the world."
 		},
 		"about": {
-			"title": "About TradeMad Brasil",
+			"title": "About TradeMad Brazil",
 			"description": "South American company specialized in international trade of reforested wood products. We connect reliable regional manufacturers with industries, importers, and distributors worldwide. With deep expertise in sourcing, logistics, and export operations, we ensure consistent quality, competitive pricing, and full compliance with global sustainability standards. Through our U.S.-based company, Atlantic Wood Distribution LLC, we also serve the American market with storage and distribution solutions.",
 			"values": {
 				"sustainability": {
@@ -299,6 +303,10 @@
 				"softwood": "Softwood (Pinho)",
 				"hardwood": "Hardwood (Eucalipto)"
 			},
+			"species": {
+				"pine": "Pinho",
+				"eucalyptus": "Eucalipto"
+			},
 			"availability": {
 				"cutToSize": "Corte sob medida",
 				"underRequest": "Sob consulta"
@@ -309,22 +317,22 @@
 				"cta": "Baixar PDF"
 			},
 			"items": {
-                "edgeGluedPanels": {
-                    "name": "Edge & Glued Panels",
-                    "category": "Painéis Engenheirados",
-                    "description": "Painéis premium de madeira maciça colados nas bordas combinando pinho e eucalipto. Ripas individuais são unidas com precisão nas bordas para criar superfícies amplas e estáveis. Disponível em configurações finger joint ou maciça. Perfeito para tampos de mesa, prateleiras, portas de armários e fabricação de móveis com estabilidade dimensional superior.",
-                    "dimensions": "Tamanhos personalizados disponíveis",
-                    "material": "Pinho e Eucalipto",
-                    "finish": "Finger Joint ou Maciço"
-                },
-                "roundGluedPanels": {
-                    "name": "Round Glued Panels",
-                    "category": "Painéis Engenheirados",
-                    "description": "Painéis redondos colados produzidos com lâminas selecionadas de pinho e eucalipto. Ideais para tampos circulares, elementos decorativos e detalhes arquitetônicos que exigem formatos simétricos com excelente estabilidade.",
-                    "dimensions": "Diâmetros personalizados disponíveis",
-                    "material": "Pinho e Eucalipto",
-                    "finish": "Lixado e Finalizado"
-                },
+				"edgeGluedPanels": {
+					"name": "Edge Glued Panels",
+					"category": "Painéis Engenheirados",
+					"description": "Painéis premium de madeira maciça colados nas bordas combinando pinho e eucalipto. Ripas individuais são unidas com precisão nas bordas para criar superfícies amplas e estáveis. Disponível em configurações finger joint ou maciça. Perfeito para tampos de mesa, prateleiras, portas de armários e fabricação de móveis com estabilidade dimensional superior.",
+					"dimensions": "Tamanhos personalizados disponíveis",
+					"material": "Pinho e Eucalipto",
+					"finish": "Finger Joint ou Maciço"
+				},
+				"roundGluedPanels": {
+					"name": "Round Glued Panels",
+					"category": "Painéis Engenheirados",
+					"description": "Painéis redondos colados produzidos com lâminas selecionadas de pinho. Ideais para tampos circulares, elementos decorativos e detalhes arquitetônicos que exigem formatos simétricos com excelente estabilidade.",
+					"dimensions": "Diâmetros personalizados disponíveis",
+					"material": "Madeira de Pinho",
+					"finish": "Lixado e Finalizado"
+				},
 				"flatJambs": {
 					"name": "Flat Jambs (Raw & Prime)",
 					"category": "Lâminas e Componentes",
@@ -366,7 +374,7 @@
 					"finish": "Seca em Estufa e Serrada"
 				},
 				"plywoodOsbCdx": {
-					"name": "Plywood - CDX & OSB",
+					"name": "Plywood",
 					"category": "Painéis Engenheirados",
 					"description": "Painéis de Compensado, OSB e CDX de alta qualidade para construção e uso industrial. Soluções versáteis de madeira engenheirada oferecendo excelente estabilidade estrutural e durabilidade para revestimentos, pisos e embalagens.",
 					"dimensions": "Múltiplos tamanhos disponíveis",
@@ -550,6 +558,10 @@
 				"softwood": "Softwood (Pino)",
 				"hardwood": "Hardwood (Eucalipto)"
 			},
+			"species": {
+				"pine": "Pino",
+				"eucalyptus": "Eucalipto"
+			},
 			"availability": {
 				"cutToSize": "Corte a medida",
 				"underRequest": "Bajo pedido"
@@ -560,22 +572,22 @@
 				"cta": "Descargar PDF"
 			},
 			"items": {
-                "edgeGluedPanels": {
-                    "name": "Edge & Glued Panels",
-                    "category": "Paneles Ingenieriles",
-                    "description": "Paneles premium de madera maciza encolados en los bordes combinando pino y eucalipto. Listones individuales se unen con precisión en los bordes para crear superficies amplias y estables. Disponible en configuraciones finger joint o maciza. Perfecto para tableros de mesa, estanterías, puertas de armarios y fabricación de muebles con estabilidad dimensional superior.",
-                    "dimensions": "Tamaños personalizados disponibles",
-                    "material": "Pino y Eucalipto",
-                    "finish": "Finger Joint o Macizo"
-                },
-                "roundGluedPanels": {
-                    "name": "Round Glued Panels",
-                    "category": "Paneles Ingenieriles",
-                    "description": "Paneles redondos encolados fabricados con láminas seleccionadas de pino y eucalipto. Ideales para tableros circulares, exhibidores decorativos y detalles arquitectónicos que requieren formas simétricas con excelente estabilidad.",
-                    "dimensions": "Diámetros personalizados disponibles",
-                    "material": "Pino y Eucalipto",
-                    "finish": "Lijado y Acabado"
-                },
+				"edgeGluedPanels": {
+					"name": "Edge Glued Panels",
+					"category": "Paneles Ingenieriles",
+					"description": "Paneles premium de madera maciza encolados en los bordes combinando pino y eucalipto. Listones individuales se unen con precisión en los bordes para crear superficies amplias y estables. Disponible en configuraciones finger joint o maciza. Perfecto para tableros de mesa, estanterías, puertas de armarios y fabricación de muebles con estabilidad dimensional superior.",
+					"dimensions": "Tamaños personalizados disponibles",
+					"material": "Pino y Eucalipto",
+					"finish": "Finger Joint o Macizo"
+				},
+				"roundGluedPanels": {
+					"name": "Round Glued Panels",
+					"category": "Paneles Ingenieriles",
+					"description": "Paneles redondos encolados fabricados con láminas seleccionadas de pino. Ideales para tableros circulares, exhibidores decorativos y detalles arquitectónicos que requieren formas simétricas con excelente estabilidad.",
+					"dimensions": "Diámetros personalizados disponibles",
+					"material": "Madera de Pino",
+					"finish": "Lijado y Acabado"
+				},
 				"flatJambs": {
 					"name": "Jambas Planas (Raw & Prime)",
 					"category": "Chapas y Componentes",
@@ -617,7 +629,7 @@
 					"finish": "Secada en Horno y Aserrada"
 				},
 				"plywoodOsbCdx": {
-					"name": "Plywood - CDX & OSB",
+					"name": "Plywood",
 					"category": "Paneles Ingenieriles",
 					"description": "Paneles de Contrachapado, OSB y CDX de alta calidad para construcción y uso industrial. Soluciones versátiles de madera ingenieril que ofrecen excelente estabilidad estructural y durabilidad para revestimientos, pisos y embalajes.",
 					"dimensions": "Múltiples tamaños disponibles",

@@ -21,7 +21,7 @@ type Product = {
   }
   descriptionKey: string
   species: Array<"softwood" | "hardwood">
-  availability: "cutToSize" | "underRequest"
+  availability?: "cutToSize" | "underRequest"
   specificationsKeys: {
     dimensions: string
     material: string
@@ -31,99 +31,81 @@ type Product = {
 
 // Edge Glued Panels - separating by species
 const edgeGluedPanelSoftwoodImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0162.jpg", // pinho
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250925-WA0084.jpg", // pinho
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250930-WA0019.jpg", // pinho
+  "/images/Glued Panels/Edge Glued Panel Pine/Edge Glued Panel Pine.jpg",
 ]
 
 const edgeGluedPanelHardwoodImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg", // eucalipto
+  "/images/Glued Panels/Edge Glued Panels Eucalyptus/Edge Glued Panels Eucalyptus.jpg",
 ]
 
 const edgeGluedPanelImages = [...edgeGluedPanelSoftwoodImages, ...edgeGluedPanelHardwoodImages]
 
-// Round Glued Panels - separating by species
-const roundGluedPanelSoftwoodImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250904-WA0164.jpg", // pinho
+// Round Glued Panels - apenas pinho
+const roundGluedPanelImages = [
+  "/images/Glued Panels/Round Glued Panel Pine/Round Glued Panel Pine.jpg",
 ]
 
-const roundGluedPanelHardwoodImages = [
-  "/images/Edge Glued Panels Pine-Eucalyptus/IMG-20250522-WA0100.jpg", // eucalipto (reusing)
+// Flat Jambs - apenas pinho
+const flatJambImages = [
+  "/images/Pine Flat Jambs RAW-PRIMED/Pine Flat Jambs RAW.jpg",
+  "/images/Pine Flat Jambs RAW-PRIMED/Pine Flat Jambs PRIMED.jpeg",
 ]
 
-const roundGluedPanelImages = [...roundGluedPanelSoftwoodImages, ...roundGluedPanelHardwoodImages]
-
-
-// Moldings - separating by species
-const moldingSoftwoodImages = [
-  "/images/Moldings/IMG-20240921-WA0015.jpg", // pinho
+// Moldings - apenas pinho
+const moldingImages = [
+  "/images/Pine Moldings RAW-PRIMED/Moldings - RAW-PRIMED.jpeg",
 ]
 
-const moldingHardwoodImages = [
-  "/images/Moldings/IMG-20241104-WA0106.jpg", // eucalipto
+// Scantling - separating by species
+const scantlingSoftwoodImages = [
+  "/images/Scantlings/Pine Scantling/Pine Scantling.jpg",
 ]
 
-const moldingImages = [...moldingSoftwoodImages, ...moldingHardwoodImages]
-
-// Flat Jambs - separating by species
-const flatJambSoftwoodImages = [
-  "/images/Flat Jambs/IMG-20251017-WA0020.jpg", // pinho
+const scantlingHardwoodImages = [
+  "/images/Scantlings/Eucalyptus Scantling/Eucalyptus Scantling.jpg",
 ]
 
-const flatJambHardwoodImages = [
-  "/images/Flat Jambs/IMG-20251017-WA0053.jpg", // eucalipto
-]
-
-const flatJambImages = [...flatJambSoftwoodImages, ...flatJambHardwoodImages]
-
-// Scantling - separating by species (corrigido conforme especificação)
-const scantlingSoftwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0034.jpg"] // pinho
-const scantlingHardwoodImages = ["/images/Pine-Eucalyptus Scantling/IMG-20251017-WA0022.jpg"] // eucalipto
 const scantlingImages = [...scantlingSoftwoodImages, ...scantlingHardwoodImages]
 
 // Stake Lumber - separating by species
 const stakeLumberSoftwoodImages = [
-  "/images/Pine Lumber/IMG-20251017-WA0021.jpg", // stake lumber pinho
+  "/images/Stake Lumbers/Pine Stake Lumber/Pine Stake Lumber.jpg",
 ]
 
 const stakeLumberHardwoodImages = [
-  "/placeholder.jpg", // sem foto específica para stake lumber eucalipto
+  "/images/Stake Lumbers/Eucalyptus Stake Lumber/Eucalyptus Stake Lumber.jpeg",
 ]
 
-// Lumber - separating by species (corrigido conforme especificação)
+const stakeLumberImages = [...stakeLumberSoftwoodImages, ...stakeLumberHardwoodImages]
+
+// Lumber - separating by species
 const lumberSoftwoodImages = [
-  "/images/Pine Lumber/IMG-20250506-WA0023.jpg",
-  "/images/Pine Lumber/IMG-20250807-WA0031.jpg",
-  "/images/Pine Lumber/IMG-20251017-WA0036.jpg",
-  "/images/Pine Lumber/IMG-20251009-WA0082.jpg",
-  "/images/Pine Lumber/IMG-20251017-WA0014.jpg",
+  "/images/Lumbers/Pine Lumber/pine-lumber.jpeg",
 ]
 
 const lumberHardwoodImages = [
-  "/images/Eucalyptus Lumber/IMG-20251017-WA0024.jpg",
-  "/images/Eucalyptus Lumber/IMG-20251017-WA0042.jpg",
+  "/images/Lumbers/Eucalyptus Lumber/Eucalyptus Lumber.jpg",
 ]
 
-// Plywood - separating by species and type (corrigido conforme especificação)
+const lumberImages = [...lumberSoftwoodImages, ...lumberHardwoodImages]
+
+// Plywood - separating by species
 const plywoodSoftwoodImages = [
-  "/images/Plywood OSB - CDX/IMG-20251017-WA0030.jpg", // CDX pinho
-  "/images/Plywood OSB - CDX/IMG-20250221-WA0027.jpg", // OSB pinho
+  "/images/Plywood/Pine Plywood/Pine Plywood.jpeg",
 ]
 
 const plywoodHardwoodImages = [
-  "/images/Plywood OSB - CDX/IMG-20250617-WA0077.jpg", // CDX eucalipto
-  "/images/Plywood OSB - CDX/IMG-20250221-WA0025.jpg", // OSB eucalipto
+  "/images/Plywood/Eucalyptus Plywood/Eucalyptus Plywood.jpeg",
 ]
 
 const plywoodImages = [...plywoodSoftwoodImages, ...plywoodHardwoodImages]
 
-// Logs & Chips - categoria isolada (não remete a soft/hard específico)
+// Logs & Chips - categoria isolada
 const logsChipsImages = [
-  "/images/Logs - Chips/IMG-20251017-WA0035.jpg", // logs
-  "/images/Logs - Chips/IMG-20251017-WA0012.jpg", // chips
-  "/images/Logs - Chips/IMG-20251017-WA0013.jpg", // chips
+  "/images/Logs - Chips/logs.jpg",
+  "/images/Logs - Chips/chips.jpg",
+  "/images/Logs - Chips/chips2.jpg",
 ]
-
 
 const products: Product[] = [
   {
@@ -150,11 +132,11 @@ const products: Product[] = [
     categoryKey: "products.items.roundGluedPanels.category",
     images: roundGluedPanelImages,
     speciesImages: {
-      softwood: roundGluedPanelSoftwoodImages,
-      hardwood: roundGluedPanelHardwoodImages,
+      softwood: roundGluedPanelImages,
+      hardwood: roundGluedPanelImages,
     },
     descriptionKey: "products.items.roundGluedPanels.description",
-    species: ["softwood", "hardwood"],
+    species: ["softwood"],
     availability: "underRequest",
     specificationsKeys: {
       dimensions: "products.items.roundGluedPanels.dimensions",
@@ -168,11 +150,11 @@ const products: Product[] = [
     categoryKey: "products.items.flatJambs.category",
     images: flatJambImages,
     speciesImages: {
-      softwood: flatJambSoftwoodImages,
-      hardwood: flatJambHardwoodImages,
+      softwood: flatJambImages,
+      hardwood: flatJambImages,
     },
     descriptionKey: "products.items.flatJambs.description",
-    species: ["softwood", "hardwood"],
+    species: ["softwood"],
     availability: "underRequest",
     specificationsKeys: {
       dimensions: "products.items.flatJambs.dimensions",
@@ -186,11 +168,11 @@ const products: Product[] = [
     categoryKey: "products.items.moldings.category",
     images: moldingImages,
     speciesImages: {
-      softwood: moldingSoftwoodImages,
-      hardwood: moldingHardwoodImages,
+      softwood: moldingImages,
+      hardwood: moldingImages,
     },
     descriptionKey: "products.items.moldings.description",
-    species: ["softwood", "hardwood"],
+    species: ["softwood"],
     availability: "underRequest",
     specificationsKeys: {
       dimensions: "products.items.moldings.dimensions",
@@ -220,14 +202,14 @@ const products: Product[] = [
     id: "6",
     nameKey: "products.items.stakeLumber.name",
     categoryKey: "products.items.stakeLumber.category",
-    images: [...stakeLumberSoftwoodImages, ...stakeLumberHardwoodImages],
+    images: stakeLumberImages,
     speciesImages: {
       softwood: stakeLumberSoftwoodImages,
       hardwood: stakeLumberHardwoodImages,
     },
     descriptionKey: "products.items.stakeLumber.description",
     species: ["softwood", "hardwood"],
-    availability: "underRequest",
+    availability: "cutToSize",
     specificationsKeys: {
       dimensions: "products.items.stakeLumber.dimensions",
       material: "products.items.stakeLumber.material",
@@ -238,7 +220,7 @@ const products: Product[] = [
     id: "7",
     nameKey: "products.items.lumber.name",
     categoryKey: "products.items.lumber.category",
-    images: [...lumberSoftwoodImages, ...lumberHardwoodImages],
+    images: lumberImages,
     speciesImages: {
       softwood: lumberSoftwoodImages,
       hardwood: lumberHardwoodImages,
@@ -383,7 +365,9 @@ export function ProductGrid() {
                   key={value}
                   onClick={() => toggleFilter(value)}
                   className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all ${
-                    isActive ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-white/80 border-border text-muted-foreground hover:text-foreground"
+                    isActive 
+                      ? "bg-primary text-primary-foreground border-primary shadow-sm" 
+                      : "bg-background/80 dark:bg-card/80 border-border text-muted-foreground hover:text-foreground hover:bg-background dark:hover:bg-card"
                   }`}
                 >
                   <Icon className="h-4 w-4" />
@@ -397,19 +381,17 @@ export function ProductGrid() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product, index) => {
               const displayedImages = getDisplayedImages(product)
-              const mainImage = displayedImages[0] || "/placeholder.svg"
-
               return (
                 <Card
                   key={product.id}
                   className="group overflow-hidden rounded-3xl border border-border/40 bg-white/95 dark:bg-card/95 shadow-[0_12px_35px_rgba(15,23,42,0.08)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.12)] transition-all duration-300 animate-scale-in cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
-                  onClick={() => setSelectedProduct({ ...product, images: displayedImages })}
+                  onClick={() => setSelectedProduct(product)}
                 >
                   {/* Product Image */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-neutral-200/40 dark:bg-neutral-800/60">
                     <img
-                      src={mainImage}
+                      src={displayedImages[0] || "/placeholder.svg"}
                       alt={t(product.nameKey)}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -427,6 +409,22 @@ export function ProductGrid() {
                     <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
                       {t(product.categoryKey)}
                     </Badge>
+
+                    {/* Species Tags */}
+                    <div className="absolute top-4 left-4 flex flex-col gap-1">
+                      {product.species.includes("softwood") && (
+                        <Badge variant="secondary" className="text-xs bg-green-100 text-green-800 border-green-200 dark:bg-green-900 dark:text-green-100">
+                          <Trees className="w-3 h-3 mr-1" />
+                          {t("products.species.pine")}
+                        </Badge>
+                      )}
+                      {product.species.includes("hardwood") && (
+                        <Badge variant="secondary" className="text-xs bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900 dark:text-amber-100">
+                          <Sprout className="w-3 h-3 mr-1" />
+                          {t("products.species.eucalyptus")}
+                        </Badge>
+                      )}
+                    </div>
                   </div>
 
                   {/* Product Info */}
@@ -434,9 +432,11 @@ export function ProductGrid() {
                     <h3 className="font-serif text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {t(product.nameKey)}
                     </h3>
-                    <div className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-primary">
-                      {t(`products.availability.${product.availability}`)}
-                    </div>
+                    {product.availability && (
+                      <div className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-primary">
+                        {t(`products.availability.${product.availability}`)}
+                      </div>
+                    )}
                     <p className="text-muted-foreground line-clamp-3 leading-relaxed">{t(product.descriptionKey)}</p>
                   </div>
                 </Card>
