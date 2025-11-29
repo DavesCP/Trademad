@@ -1,4 +1,4 @@
-// app/page.tsx
+// app/page.tsx1
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { ProductGrid } from "@/components/product-grid";
