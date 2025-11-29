@@ -1,0 +1,21 @@
+{
+  "name": "TradeMad Brazil - Premium Wood Products",
+  "short_name": "TradeMad Brazil",
+  "description": "Premium wood products from South America to the world",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4ecdf",
+  "theme_color": "#45a049",
+  "icons": [
+    {
+      "src": "/images/favicon-trademad.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon-trademad.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

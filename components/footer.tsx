@@ -25,7 +25,7 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl sm:text-2xl">
+                <span className="font-bold text-lg sm:text-xl">
                   TradeMad Brazil
                 </span>
                 <span className="uppercase tracking-[0.2em] text-[0.55rem] sm:text-xs opacity-80">
