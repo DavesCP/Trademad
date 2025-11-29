@@ -123,9 +123,9 @@ export function HeroSection() {
                 <Download className="ml-2 h-5 w-5" />
               </Button>
             </div>
-            <p className="mt-4 flex items-center justify-center gap-2 text-sm text-white/80 dark:text-muted-foreground">
-              <Download className="h-4 w-4 flex-shrink-0" />
-              <span className="text-center">{t("hero.catalogTag")}</span>
+            <p className="mt-4 flex items-start justify-center gap-2 text-sm text-white/80 dark:text-muted-foreground">
+              <Download className="h-4 w-4 flex-shrink-0 mt-0.5" />
+              <span className="text-center leading-tight">{t("hero.catalogTag")}</span>
             </p>
           </div>
 
