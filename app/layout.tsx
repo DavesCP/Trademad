@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/lib/theme-context"
 import { UnderConstructionBanner } from "@/components/under-construction-banner"
 import { BodyBackgroundActivator } from "@/components/body-background-activator"
 
-const SHOW_UNDER_CONSTRUCTION = true
+const SHOW_UNDER_CONSTRUCTION = false
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
