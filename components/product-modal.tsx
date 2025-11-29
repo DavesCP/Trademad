@@ -45,7 +45,7 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
     // Smooth scroll to contact section
     const contactSection = document.getElementById("contact")
     if (contactSection) {
-      const headerOffset = 80 // Height of fixed header
+      const headerOffset = 96 // Height of fixed header
       const elementPosition = contactSection.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 

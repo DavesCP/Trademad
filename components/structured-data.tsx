@@ -10,7 +10,7 @@ export function StructuredData() {
       "@type": "ContactPoint",
       "telephone": "+55-47-9910-1050",
       "contactType": "sales",
-      "availableLanguage": ["English", "Portuguese", "Spanish"]
+      "availableLanguage": ["en-US", "pt-BR", "es"]
     },
     "address": {
       "@type": "PostalAddress",

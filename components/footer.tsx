@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex flex-col items-center gap-1 group">
               <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
                 <Image
                   src="/images/favicon-trademad.png"
@@ -24,14 +24,9 @@ export function Footer() {
                   className="object-contain drop-shadow-lg"
                 />
               </div>
-              <div className="flex flex-col leading-tight">
-                <span className="font-bold text-lg sm:text-xl">
-                  TradeMad Brazil
-                </span>
-                <span className="uppercase tracking-[0.2em] text-[0.55rem] sm:text-xs opacity-80">
-                  international timber trade
-                </span>
-              </div>
+              <span className="font-sans font-semibold text-sm leading-none text-center tracking-wide">
+                TradeMad Brazil
+              </span>
             </Link>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">{t("footer.brandDescription")}</p>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-emerald-950 shadow hover:bg-emerald-300 transition-colors cursor-pointer"
