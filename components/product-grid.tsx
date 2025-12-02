@@ -31,80 +31,97 @@ type Product = {
 
 // Edge Glued Panels - separating by species
 const edgeGluedPanelSoftwoodImages = [
-  "/images/Glued Panels/Edge Glued Panel Pine/Edge Glued Panel Pine.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/103-5012-1_042523.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/103-5012-3_042523.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/Shopifypanel-wide_400x.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/softwood-boards-64307544-c3_600.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/images-4.jpeg",
+  "/images/fotos-produtos/Edge Glued Panels (Softwood)/3924bc82-30ca-400a-b0dd-2523c6fc90be.e638cd23502eaa374962948d6a622c03.jpeg",
 ]
 
+// Edge Glued Panels Hardwood - usando fotos da pasta específica
 const edgeGluedPanelHardwoodImages = [
-  "/images/Glued Panels/Edge Glued Panels Eucalyptus/Edge Glued Panels Eucalyptus.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Hardwood)/edge_glued_panel_eucalipto.png",
 ]
 
 const edgeGluedPanelImages = [...edgeGluedPanelSoftwoodImages, ...edgeGluedPanelHardwoodImages]
 
-// Round Glued Panels - apenas pinho
+// Round Glued Panels - usando fotos da pasta específica
 const roundGluedPanelImages = [
-  "/images/Glued Panels/Round Glued Panel Pine/Round Glued Panel Pine.jpg",
+  "/images/fotos-produtos/Round Glued Panels (Softwood)/round_glued_panel.png",
 ]
 
 // Flat Jambs - apenas pinho
 const flatJambImages = [
-  "/images/Pine Flat Jambs RAW-PRIMED/Pine Flat Jambs RAW.jpg",
-  "/images/Pine Flat Jambs RAW-PRIMED/Pine Flat Jambs PRIMED.jpeg",
+  "/images/fotos-produtos/Raw Flat Jambs (Softwood)/FJPMD-478-68.jpg",
+  "/images/fotos-produtos/Raw Flat Jambs (Softwood)/images-8.jpeg",
+  "/images/fotos-produtos/Raw Flat Jambs (Softwood)/primed-white-alexandria-moulding-casing-4203v-rv082c5d3-64_600.jpg",
 ]
 
 // Moldings - apenas pinho
 const moldingImages = [
-  "/images/Pine Moldings RAW-PRIMED/Moldings - RAW-PRIMED.jpeg",
+  "/images/fotos-produtos/Raw Moldings (Softwood)/images-9.jpeg",
+  "/images/fotos-produtos/Raw Moldings (Softwood)/images-10.jpeg",
 ]
 
 // Scantling - separating by species
+// Pine Scantling Softwood - usando fotos da pasta específica
 const scantlingSoftwoodImages = [
-  "/images/Scantlings/Pine Scantling/Pine Scantling.jpg",
+  "/images/fotos-produtos/Pine Scantling (Softwood)/scantling_pinho.png",
 ]
 
 const scantlingHardwoodImages = [
-  "/images/Scantlings/Eucalyptus Scantling/Eucalyptus Scantling.jpg",
+  "/images/fotos-produtos/Eucalyptus Scantling (Hardwood)/file_00000000729c720ea2d432ee785eadae.png",
+  "/images/fotos-produtos/Eucalyptus Scantling (Hardwood)/H629a9fa487d247e5b7845e108eeb1cd9z.jpg",
 ]
 
 const scantlingImages = [...scantlingSoftwoodImages, ...scantlingHardwoodImages]
 
-// Stake Lumber - separating by species
+// Stake Lumber - usando fotos das pastas específicas
 const stakeLumberSoftwoodImages = [
-  "/images/Stake Lumbers/Pine Stake Lumber/Pine Stake Lumber.jpg",
+  "/images/fotos-produtos/Stake Lumber (Softwood)/stake_lumber_pinho_1.png",
+  "/images/fotos-produtos/Stake Lumber (Softwood)/stake_lumber_pinho_2.png",
 ]
 
 const stakeLumberHardwoodImages = [
-  "/images/Stake Lumbers/Eucalyptus Stake Lumber/Eucalyptus Stake Lumber.jpeg",
+  "/images/fotos-produtos/Stake Lumber (Hardwood)/stake_lumber_eucalipto.png",
 ]
 
 const stakeLumberImages = [...stakeLumberSoftwoodImages, ...stakeLumberHardwoodImages]
 
 // Lumber - separating by species
 const lumberSoftwoodImages = [
-  "/images/Lumbers/Pine Lumber/pine-lumber.jpeg",
+  "/images/fotos-produtos/Pine Lumber (Softwood)/IMG-20251128-WA0186.jpg",
+  "/images/fotos-produtos/Pine Lumber (Softwood)/TABUAS-PINUS-1.jpg",
+  "/images/fotos-produtos/Pine Lumber (Softwood)/Sem-Titulo-1-500x375.png",
 ]
 
 const lumberHardwoodImages = [
-  "/images/Lumbers/Eucalyptus Lumber/Eucalyptus Lumber.jpg",
+  "/images/fotos-produtos/Eucalyptus Lumber (Hardwood)/2x4-Eucalyptus-LVL-Pine-High-Quality-Industrial-Style-Laminated-Veneer-Lumber-for-Exterior-Building-Construction-Meets-E1.jpg_300x300.jpg",
+  "/images/fotos-produtos/Eucalyptus Lumber (Hardwood)/mini_347c38946edc73fd20a8979ba00899a3.jpg",
+  "/images/fotos-produtos/Eucalyptus Lumber (Hardwood)/South-Korea-Market-E1-Glue-Eucalyptus-LVL-Hardwood-Poplar-Core-2x4-Lumber-Prices.jpg_300x300.jpg",
 ]
 
 const lumberImages = [...lumberSoftwoodImages, ...lumberHardwoodImages]
 
-// Plywood - separating by species
+// Plywood - agora tem pasta Softwood também
 const plywoodSoftwoodImages = [
-  "/images/Plywood/Pine Plywood/Pine Plywood.jpeg",
+  "/images/fotos-produtos/Plywood (Softwood)/plywood_pinho.png",
+  "/images/fotos-produtos/Plywood (Softwood)/plywood_pinho_2.png",
 ]
 
 const plywoodHardwoodImages = [
-  "/images/Plywood/Eucalyptus Plywood/Eucalyptus Plywood.jpeg",
+  "/images/fotos-produtos/Plywood (Hardwood)/images-6.jpeg",
+  "/images/fotos-produtos/Plywood (Hardwood)/images-7.jpeg",
 ]
 
 const plywoodImages = [...plywoodSoftwoodImages, ...plywoodHardwoodImages]
 
 // Logs & Chips - categoria isolada
 const logsChipsImages = [
-  "/images/Logs - Chips/logs.jpg",
-  "/images/Logs - Chips/chips.jpg",
-  "/images/Logs - Chips/chips2.jpg",
+  "/images/fotos-produtos/Logs - Chips/IMG-20251017-WA0012.jpg",
+  "/images/fotos-produtos/Logs - Chips/IMG-20251017-WA0013.jpg",
+  "/images/fotos-produtos/Logs - Chips/IMG-20251017-WA0035.jpg",
 ]
 
 const products: Product[] = [
