@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Download, Leaf } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
+import Link from "next/link";
+import Image from "next/image";
+import { Download, Leaf } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 export function Footer() {
-  const { t, language } = useLanguage()
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 border-t border-border">
@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex flex-col items-center gap-1 group">
+            <Link href="/" className="flex flex-col items-start gap-1 group">
               <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
                 <Image
                   src="/images/favicon-trademad.png"
@@ -24,28 +24,31 @@ export function Footer() {
                   className="object-contain drop-shadow-lg"
                 />
               </div>
-              <span className="font-sans font-semibold text-sm leading-none text-center tracking-wide">
+              <span className="font-sans font-semibold text-sm leading-none text-left tracking-wide">
                 TradeMad Brazil
               </span>
             </Link>
-            <p className="text-sm text-secondary-foreground/80 leading-relaxed">{t("footer.brandDescription")}</p>
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-emerald-950 shadow hover:bg-emerald-300 transition-colors cursor-pointer"
+            <p className="text-sm text-secondary-foreground/80 leading-relaxed">
+              {t("footer.brandDescription")}
+            </p>
+            <div
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-emerald-950 shadow hover:bg-emerald-300 transition-colors cursor-pointer"
               onClick={async () => {
                 try {
-                  const response = await fetch('/files/TradeMad-catalog.pdf')
-                  if (!response.ok) throw new Error('PDF não encontrado')
-                  const blob = await response.blob()
-                  const url = window.URL.createObjectURL(blob)
-                  const link = document.createElement('a')
-                  link.href = url
-                  link.download = 'TradeMad-catalog.pdf'
-                  document.body.appendChild(link)
-                  link.click()
-                  document.body.removeChild(link)
-                  window.URL.revokeObjectURL(url)
+                  const response = await fetch("/files/TradeMad-catalog.pdf");
+                  if (!response.ok) throw new Error("PDF não encontrado");
+                  const blob = await response.blob();
+                  const url = window.URL.createObjectURL(blob);
+                  const link = document.createElement("a");
+                  link.href = url;
+                  link.download = "TradeMad-catalog.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  window.URL.revokeObjectURL(url);
                 } catch (error) {
-                  console.error('Erro ao baixar PDF:', error)
-                  window.open('/files/TradeMad-catalog.pdf', '_blank')
+                  console.error("Erro ao baixar PDF:", error);
+                  window.open("/files/TradeMad-catalog.pdf", "_blank");
                 }
               }}
             >
@@ -59,7 +62,10 @@ export function Footer() {
             <h3 className="font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors">
+                <Link
+                  href="/"
+                  className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
+                >
                   {t("nav.home")}
                 </Link>
               </li>
@@ -94,10 +100,18 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">{t("footer.productsTitle")}</h3>
             <ul className="space-y-2">
-              <li className="text-sm text-secondary-foreground/80">{t("footer.productsList.flooring")}</li>
-              <li className="text-sm text-secondary-foreground/80">{t("footer.productsList.decking")}</li>
-              <li className="text-sm text-secondary-foreground/80">{t("footer.productsList.panels")}</li>
-              <li className="text-sm text-secondary-foreground/80">{t("footer.productsList.furniture")}</li>
+              <li className="text-sm text-secondary-foreground/80">
+                {t("footer.productsList.flooring")}
+              </li>
+              <li className="text-sm text-secondary-foreground/80">
+                {t("footer.productsList.decking")}
+              </li>
+              <li className="text-sm text-secondary-foreground/80">
+                {t("footer.productsList.panels")}
+              </li>
+              <li className="text-sm text-secondary-foreground/80">
+                {t("footer.productsList.furniture")}
+              </li>
             </ul>
           </div>
 
@@ -123,5 +137,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

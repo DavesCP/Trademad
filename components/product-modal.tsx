@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -12,7 +12,12 @@ type Product = {
   nameKey: string
   categoryKey: string
   images: string[]
+  speciesImages?: {
+    softwood?: string[]
+    hardwood?: string[]
+  }
   descriptionKey: string
+  species: Array<"softwood" | "hardwood">
   availability?: "cutToSize" | "underRequest"
   specificationsKeys: {
     dimensions: string
@@ -25,19 +30,28 @@ type ProductModalProps = {
   product: Product
   open: boolean
   onClose: () => void
+  displayedImages?: string[] // Imagens filtradas por espécie
 }
 
-export function ProductModal({ product, open, onClose }: ProductModalProps) {
+export function ProductModal({ product, open, onClose, displayedImages }: ProductModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { t } = useLanguage()
 
+  // Usa as imagens filtradas se fornecidas, senão usa as imagens do produto
+  const imagesToShow = displayedImages || product.images
+
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % product.images.length)
+    setCurrentImageIndex((prev) => (prev + 1) % imagesToShow.length)
   }
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length)
+    setCurrentImageIndex((prev) => (prev - 1 + imagesToShow.length) % imagesToShow.length)
   }
+
+  // Resetar o índice quando as imagens mudam (filtros aplicados)
+  useEffect(() => {
+    setCurrentImageIndex(0)
+  }, [displayedImages])
 
   const handleContactClick = () => {
     onClose() // Close the modal first
@@ -81,13 +95,13 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
             {/* Main Image */}
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted">
               <img
-                src={product.images[currentImageIndex] || "/placeholder.svg"}
+                src={imagesToShow[currentImageIndex] || "/placeholder.svg"}
                 alt={`${t(product.nameKey)} - ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
               />
 
               {/* Navigation Buttons */}
-              {product.images.length > 1 && (
+              {imagesToShow.length > 1 && (
                 <>
                   <Button
                     variant="secondary"
@@ -111,13 +125,13 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
               )}
 
               <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm">
-                {currentImageIndex + 1} {t("products.imageCounter")} {product.images.length}
+                {currentImageIndex + 1} {t("products.imageCounter")} {imagesToShow.length}
               </div>
             </div>
 
             {/* Thumbnail Gallery */}
             <div className="hidden sm:grid grid-cols-5 gap-3">
-              {product.images.map((image, index) => (
+              {imagesToShow.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
@@ -135,7 +149,7 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
               ))}
             </div>
             <div className="flex sm:hidden gap-3 overflow-x-auto pb-1">
-              {product.images.map((image, index) => (
+              {imagesToShow.map((image, index) => (
                 <button
                   key={`mobile-${index}`}
                   onClick={() => setCurrentImageIndex(index)}

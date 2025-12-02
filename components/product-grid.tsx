@@ -41,33 +41,45 @@ const edgeGluedPanelSoftwoodImages = [
 
 // Edge Glued Panels Hardwood - usando fotos da pasta específica
 const edgeGluedPanelHardwoodImages = [
-  "/images/fotos-produtos/Edge Glued Panels (Hardwood)/edge_glued_panel_eucalipto.png",
+  "/images/fotos-produtos/Edge Glued Panels (Hardwood)/edge-glued-boardl_eucalyptus.jpg",
+  "/images/fotos-produtos/Edge Glued Panels (Hardwood)/painel-17-mm1-06df41d39e0e122e7116929698938063-1024-1024.jpg",
 ]
 
 const edgeGluedPanelImages = [...edgeGluedPanelSoftwoodImages, ...edgeGluedPanelHardwoodImages]
 
 // Round Glued Panels - usando fotos da pasta específica
 const roundGluedPanelImages = [
-  "/images/fotos-produtos/Round Glued Panels (Softwood)/round_glued_panel.png",
+  "/images/fotos-produtos/Round Glued Panels (Softwood)/images-5.jpeg",
+  "/images/fotos-produtos/Round Glued Panels (Softwood)/Round-Pine-Edge-Glued-Board_96185a4d-f866-4773-aa25-67de80fe39f6_1.dd6a4243f9f14108552c2d20b3f59195.jpeg",
 ]
 
-// Flat Jambs - apenas pinho
-const flatJambImages = [
+// Flat Jambs - apenas pinho - Raw e Primed
+const flatJambRawImages = [
   "/images/fotos-produtos/Raw Flat Jambs (Softwood)/FJPMD-478-68.jpg",
   "/images/fotos-produtos/Raw Flat Jambs (Softwood)/images-8.jpeg",
-  "/images/fotos-produtos/Raw Flat Jambs (Softwood)/primed-white-alexandria-moulding-casing-4203v-rv082c5d3-64_600.jpg",
 ]
 
-// Moldings - apenas pinho
+const flatJambPrimedImages = [
+  "/images/fotos-produtos/Raw Flat Jambs (Softwood)/primed-white-alexandria-moulding-casing-4203v-rv082c5d3-64_600.jpg",
+  "/images/fotos-produtos/Primed Flat Jambs (Softwood)/Primed Flat Jambs (Softwood)/Hd65e05465e8446299c03659c2b222f05v(1).jpg",
+  "/images/fotos-produtos/Primed Flat Jambs (Softwood)/Primed Flat Jambs (Softwood)/interior_door_jamb.jpg",
+]
+
+const flatJambImages = [...flatJambRawImages, ...flatJambPrimedImages]
+
+// Moldings - apenas pinho - incluindo Raw e Primed
 const moldingImages = [
   "/images/fotos-produtos/Raw Moldings (Softwood)/images-9.jpeg",
   "/images/fotos-produtos/Raw Moldings (Softwood)/images-10.jpeg",
+  "/images/fotos-produtos/Primed Moldings (Softwood)/images-11.jpeg",
+  "/images/fotos-produtos/Primed Moldings (Softwood)/images-12.jpeg",
 ]
 
 // Scantling - separating by species
-// Pine Scantling Softwood - usando fotos da pasta específica
+// Pine Scantling Softwood - usando fotos da subpasta dentro de Pine Stake
 const scantlingSoftwoodImages = [
-  "/images/fotos-produtos/Pine Scantling (Softwood)/scantling_pinho.png",
+  "/images/fotos-produtos/Pine Stake (softwood)/Pine Scantling (Softwood)/BLANKS-PINE-FINGER-JOINT-LAYERED-LAMINATE-2.jpg",
+  "/images/fotos-produtos/Pine Stake (softwood)/Pine Scantling (Softwood)/proyectos-perfiles-DDD.jpg",
 ]
 
 const scantlingHardwoodImages = [
@@ -77,14 +89,15 @@ const scantlingHardwoodImages = [
 
 const scantlingImages = [...scantlingSoftwoodImages, ...scantlingHardwoodImages]
 
-// Stake Lumber - usando fotos das pastas específicas
+// Stake Lumber - usando fotos das pastas renomeadas
 const stakeLumberSoftwoodImages = [
-  "/images/fotos-produtos/Stake Lumber (Softwood)/stake_lumber_pinho_1.png",
-  "/images/fotos-produtos/Stake Lumber (Softwood)/stake_lumber_pinho_2.png",
+  "/images/fotos-produtos/Pine Stake (softwood)/s-l1200.jpg",
+  "/images/fotos-produtos/Pine Stake (softwood)/Wood-Stakes-Pine-48PSX1-v2_1500x1500(1).jpg",
 ]
 
 const stakeLumberHardwoodImages = [
-  "/images/fotos-produtos/Stake Lumber (Hardwood)/stake_lumber_eucalipto.png",
+  "/images/fotos-produtos/Eucalyptus Stake (Hardwood)/stake_eucalyptus_01.jpg",
+  "/images/fotos-produtos/Eucalyptus Stake (Hardwood)/stake_eucalyptus_02.jpg",
 ]
 
 const stakeLumberImages = [...stakeLumberSoftwoodImages, ...stakeLumberHardwoodImages]
@@ -106,8 +119,8 @@ const lumberImages = [...lumberSoftwoodImages, ...lumberHardwoodImages]
 
 // Plywood - agora tem pasta Softwood também
 const plywoodSoftwoodImages = [
-  "/images/fotos-produtos/Plywood (Softwood)/plywood_pinho.png",
-  "/images/fotos-produtos/Plywood (Softwood)/plywood_pinho_2.png",
+  "/images/fotos-produtos/Plywood (Softwood)/Pine18TG-01719000147-600x600.png",
+  "/images/fotos-produtos/Plywood (Softwood)/s-l400.jpg",
 ]
 
 const plywoodHardwoodImages = [
@@ -545,7 +558,12 @@ export function ProductGrid() {
 
       {/* Product Modal */}
       {selectedProduct && (
-        <ProductModal product={selectedProduct} open={!!selectedProduct} onClose={() => setSelectedProduct(null)} />
+        <ProductModal 
+          product={selectedProduct} 
+          open={!!selectedProduct} 
+          onClose={() => setSelectedProduct(null)}
+          displayedImages={getDisplayedImages(selectedProduct)}
+        />
       )}
     </>
   )
