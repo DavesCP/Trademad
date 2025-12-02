@@ -32,20 +32,20 @@ export function Footer() {
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-emerald-950 shadow hover:bg-emerald-300 transition-colors cursor-pointer"
               onClick={async () => {
                 try {
-                  const response = await fetch('/files/catalogo-trademad.pdf')
+                  const response = await fetch('/files/TradeMad-catalog.pdf')
                   if (!response.ok) throw new Error('PDF não encontrado')
                   const blob = await response.blob()
                   const url = window.URL.createObjectURL(blob)
                   const link = document.createElement('a')
                   link.href = url
-                  link.download = 'catalogo-trademad.pdf'
+                  link.download = 'TradeMad-catalog.pdf'
                   document.body.appendChild(link)
                   link.click()
                   document.body.removeChild(link)
                   window.URL.revokeObjectURL(url)
                 } catch (error) {
                   console.error('Erro ao baixar PDF:', error)
-                  window.open('/files/catalogo-trademad.pdf', '_blank')
+                  window.open('/files/TradeMad-catalog.pdf', '_blank')
                 }
               }}
             >
