@@ -1,6 +1,6 @@
 "use client"
 
-import { Truck, Lightbulb, FileText, ShieldCheck, ClipboardCheck, Award } from "lucide-react"
+import { Truck, Lightbulb, FileText, ShieldCheck, ClipboardCheck } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function ServicesSection() {
@@ -26,10 +26,6 @@ export function ServicesSection() {
     {
       icon: ClipboardCheck,
       key: "documentation",
-    },
-    {
-      icon: Award,
-      key: "certification",
     },
   ]
 

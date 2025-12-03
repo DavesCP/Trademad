@@ -11,24 +11,26 @@ export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 border-t border-border">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 items-start">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex flex-col items-start gap-1 group">
-              <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
-                <Image
-                  src="/images/favicon-trademad.png"
-                  alt="TradeMad mark"
-                  fill
-                  sizes="48px"
-                  className="object-contain drop-shadow-lg"
-                />
-              </div>
-              <span className="font-sans font-semibold text-sm leading-none text-left tracking-wide">
-                TradeMad Brazil
-              </span>
-            </Link>
-            <p className="text-sm text-secondary-foreground/80 leading-relaxed">
+            <div className="flex justify-start">
+              <Link href="/" className="flex flex-col items-center gap-1 group">
+                <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
+                  <Image
+                    src="/images/favicon-trademad.png"
+                    alt="TradeMad mark"
+                    fill
+                    sizes="48px"
+                    className="object-contain drop-shadow-lg"
+                  />
+                </div>
+                <span className="font-sans font-semibold text-sm leading-none text-center tracking-wide">
+                  TradeMad Brazil
+                </span>
+              </Link>
+            </div>
+            <p className="text-sm text-secondary-foreground/80 leading-relaxed text-left">
               {t("footer.brandDescription")}
             </p>
             <div
@@ -115,19 +117,6 @@ export function Footer() {
                 {t("footer.productsList.furniture")}
               </li>
             </ul>
-          </div>
-
-          {/* Certifications */}
-          <div>
-            <h3 className="font-semibold mb-4">{t("footer.certifications")}</h3>
-            <div className="flex items-center gap-2 text-sm text-secondary-foreground/80">
-              <Leaf className="h-4 w-4 text-primary" />
-              <span>{t("footer.fscCertified")}</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-secondary-foreground/80 mt-2">
-              <Leaf className="h-4 w-4 text-primary" />
-              <span>{t("footer.iso9001")}</span>
-            </div>
           </div>
         </div>
 

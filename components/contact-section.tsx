@@ -39,7 +39,7 @@ export function ContactSection() {
                 <WhatsAppIcon className="h-7 w-7 text-green-600" />
               </div>
               <h3 className="font-serif text-xl font-bold text-foreground mb-3">{t("contact.phone")}</h3>
-              <a href="https://wa.me/5547991010050" target="_blank" rel="noopener noreferrer" className="text-lg text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://wa.me/554799101050" target="_blank" rel="noopener noreferrer" className="text-lg text-muted-foreground hover:text-primary transition-colors">
                 +55 47 9910-1050
               </a>
             </div>

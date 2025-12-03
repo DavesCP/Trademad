@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Leaf, Award, Shield, Download } from "lucide-react"
+import { ArrowRight, Leaf, Award, Download } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { cn } from "@/lib/utils"
 
@@ -129,7 +129,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-16 md:mt-16 animate-fade-in-up animation-delay-600">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-16 md:mt-16 animate-fade-in-up animation-delay-600">
             <div className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-card/85 dark:bg-card/80 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all md:hover:scale-105 md:hover:shadow-lg w-full">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
                 <Leaf className="h-7 w-7 text-primary" />
@@ -147,16 +147,6 @@ export function HeroSection() {
               <h3 className="font-semibold text-lg text-foreground">{t("hero.features.quality.title")}</h3>
               <p className="text-sm text-muted-foreground text-center leading-relaxed">
                 {t("hero.features.quality.description")}
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-card/85 dark:bg-card/80 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all md:hover:scale-105 md:hover:shadow-lg w-full">
-              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                <Shield className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground">{t("hero.features.certified.title")}</h3>
-              <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                {t("hero.features.certified.description")}
               </p>
             </div>
           </div>

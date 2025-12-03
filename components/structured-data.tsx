@@ -8,7 +8,7 @@ export function StructuredData() {
     "logo": "https://trademad.com.br/images/logo-trademad.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+55-47-9910-1050",
+      "telephone": "+55-47-99101-050",
       "contactType": "sales",
       "availableLanguage": ["en-US", "pt-BR", "es"]
     },
@@ -18,7 +18,7 @@ export function StructuredData() {
       "addressCountry": "BR"
     },
     "sameAs": [
-      "https://wa.me/5547991010050"
+      "https://wa.me/554799101050"
     ],
     "description": "TradeMad Brazil specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced pine and eucalyptus products from South America to global markets.",
     "industry": "Timber Trading",
@@ -31,7 +31,7 @@ export function StructuredData() {
       "Eucalyptus Lumber",
       "Engineered Wood Panels",
       "International Timber Trade",
-      "Sustainable Forestry"
+      "Wood Manufacturing"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

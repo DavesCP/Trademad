@@ -26,7 +26,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "TradeMad Brazil - Premium Wood Products | Pine & Eucalyptus Lumber",
   description: "TradeMad Brazil specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced pine and eucalyptus products from South America to global markets.",
-  keywords: "wood products, lumber, plywood, pine lumber, eucalyptus lumber, engineered wood panels, moldings, flat jambs, scantling, stake lumber, Brazil wood export, South America timber, sustainable wood, FSC certified, wood chips, logs, international timber trade",
+  keywords: "wood products, lumber, plywood, pine lumber, eucalyptus lumber, engineered wood panels, moldings, flat jambs, scantling, stake lumber, Brazil wood export, South America timber, sustainable wood, wood chips, logs, international timber trade",
   authors: [{ name: "TradeMad Brazil" }],
   creator: "TradeMad Brazil",
   publisher: "TradeMad Brazil",
