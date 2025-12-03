@@ -505,20 +505,20 @@ export function ProductGrid() {
                     className="rounded-full px-10 py-6 text-base shadow-[0_15px_45px_rgba(15,23,42,0.25)]"
                     onClick={async () => {
                       try {
-                        const response = await fetch('/files/TradeMad-catalog.pdf')
+                        const response = await fetch('/files/TradeMad-catalog-final.pdf')
                         if (!response.ok) throw new Error('PDF não encontrado')
                         const blob = await response.blob()
                         const url = window.URL.createObjectURL(blob)
                         const link = document.createElement('a')
                         link.href = url
-                        link.download = 'TradeMad-catalog.pdf'
+                        link.download = 'Catalogo Trademad.pdf'
                         document.body.appendChild(link)
                         link.click()
                         document.body.removeChild(link)
                         window.URL.revokeObjectURL(url)
                       } catch (error) {
                         console.error('Erro ao baixar PDF:', error)
-                        window.open('/files/TradeMad-catalog.pdf', '_blank')
+                        window.open('/files/TradeMad-catalog-final.pdf', '_blank')
                       }
                     }}
                   >
