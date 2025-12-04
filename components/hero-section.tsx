@@ -102,7 +102,7 @@ export function HeroSection() {
                 className="text-lg px-8 py-6 rounded-full border-0 bg-primary text-primary-foreground shadow-[0_15px_45px_rgba(15,23,42,0.25)] transition-all hover:bg-primary/85 focus-visible:ring-primary/70"
                 onClick={async () => {
                   try {
-                    const response = await fetch('/files/TradeMad-catalog-final.pdf')
+                    const response = await fetch('/files/TradeMad-catalog (5).pdf')
                     if (!response.ok) throw new Error('PDF não encontrado')
                     const blob = await response.blob()
                     const url = window.URL.createObjectURL(blob)
@@ -115,7 +115,7 @@ export function HeroSection() {
                     window.URL.revokeObjectURL(url)
                   } catch (error) {
                     console.error('Erro ao baixar PDF:', error)
-                    window.open('/files/TradeMad-catalog-final.pdf', '_blank')
+                    window.open('/files/TradeMad-catalog (5).pdf', '_blank')
                   }
                 }}
               >

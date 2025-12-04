@@ -138,6 +138,17 @@ const plywoodHardwoodImages = [
 
 const plywoodImages = [...plywoodSoftwoodImages, ...plywoodHardwoodImages];
 
+// Veneers/Laminas - separating by species
+const veneersSoftwoodImages = [
+  "/images/fotos-produtos/laminas (softwood)/pinho-lamina.jpeg",
+]
+
+const veneersHardwoodImages = [
+  "/images/fotos-produtos/laminas (hardwood)/eucalypto-lamina.jpeg",
+]
+
+const veneersImages = [...veneersSoftwoodImages, ...veneersHardwoodImages]
+
 // Logs & Chips - categoria isolada
 const logsChipsImages = [
   "/images/fotos-produtos/Logs - Chips/IMG-20251017-WA0012.jpg",
@@ -148,20 +159,20 @@ const logsChipsImages = [
 const products: Product[] = [
   {
     id: "1",
-    nameKey: "products.items.edgeGluedPanels.name",
-    categoryKey: "products.items.edgeGluedPanels.category",
+    nameKey: "products.items.edgeGluedPanel.name",
+    categoryKey: "products.items.edgeGluedPanel.category",
     images: edgeGluedPanelImages,
     speciesImages: {
       softwood: edgeGluedPanelSoftwoodImages,
       hardwood: edgeGluedPanelHardwoodImages,
     },
-    descriptionKey: "products.items.edgeGluedPanels.description",
+    descriptionKey: "products.items.edgeGluedPanel.description",
     species: ["softwood", "hardwood"],
     availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.edgeGluedPanels.dimensions",
-      material: "products.items.edgeGluedPanels.material",
-      finish: "products.items.edgeGluedPanels.finish",
+      dimensions: "products.items.edgeGluedPanel.dimensions",
+      material: "products.items.edgeGluedPanel.material",
+      finish: "products.items.edgeGluedPanel.finish",
     },
   },
   {
@@ -292,6 +303,24 @@ const products: Product[] = [
   },
   {
     id: "9",
+    nameKey: "products.items.veneers.name",
+    categoryKey: "products.items.veneers.category",
+    images: veneersImages,
+    speciesImages: {
+      softwood: veneersSoftwoodImages,
+      hardwood: veneersHardwoodImages,
+    },
+    descriptionKey: "products.items.veneers.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.veneers.dimensions",
+      material: "products.items.veneers.material",
+      finish: "products.items.veneers.finish",
+    },
+  },
+  {
+    id: "10",
     nameKey: "products.items.logsChips.name",
     categoryKey: "products.items.logsChips.category",
     images: logsChipsImages,
@@ -549,7 +578,7 @@ export function ProductGrid() {
                     onClick={async () => {
                       try {
                         const response = await fetch(
-                          "/files/TradeMad-catalog-final.pdf"
+                          "/files/TradeMad-catalog (5).pdf"
                         );
                         if (!response.ok) throw new Error("PDF não encontrado");
                         const blob = await response.blob();
@@ -564,7 +593,7 @@ export function ProductGrid() {
                       } catch (error) {
                         console.error("Erro ao baixar PDF:", error);
                         window.open(
-                          "/files/TradeMad-catalog-final.pdf",
+                          "/files/TradeMad-catalog (5).pdf",
                           "_blank"
                         );
                       }

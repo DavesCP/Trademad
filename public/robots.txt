@@ -15,4 +15,4 @@ Disallow: /api/
 # Allow important pages
 Allow: /
 Allow: /images/
-Allow: /files/TradeMad-catalog-final.pdf
+Allow: /files/TradeMad-catalog (5).pdf

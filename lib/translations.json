@@ -62,14 +62,14 @@
 				"underRequest": "Under request"
 			},
 			"items": {
-				"edgeGluedPanels": {
-					"name": "Edge Glued Panels",
-					"category": "Engineered Wood Panels",
-					"description": "Premium edge-glued solid wood panels combining pine and eucalyptus. Individual strips are precision-joined along their edges to create stable, wide surfaces. Available in finger-jointed or solid configurations. Perfect for tabletops, shelving, cabinet doors, and furniture making with superior dimensional stability.",
-					"dimensions": "Custom sizes available",
-					"material": "Pine & Eucalyptus",
-					"finish": "Finger-Jointed or Solid"
-				},
+			"edgeGluedPanel": {
+				"name": "Edge Glued Panel",
+				"category": "Engineered Wood Panels",
+				"description": "Premium edge-glued solid wood panels combining pine and eucalyptus. Individual strips are precision-joined along their edges to create stable, wide surfaces. Available in finger-jointed or solid configurations. Perfect for tabletops, shelving, cabinet doors, and furniture making with superior dimensional stability.",
+				"dimensions": "Custom sizes available",
+				"material": "Pine & Eucalyptus",
+				"finish": "Finger-Jointed or Solid"
+			},
 				"roundGluedPanels": {
 					"name": "Round Glued Panels",
 					"category": "Engineered Wood Panels",
@@ -80,7 +80,7 @@
 				},
 				"flatJambs": {
 					"name": "Flat Jambs (Raw & Prime)",
-					"category": "Veneers & Components",
+					"category": "Components",
 					"description": "Premium flat door and window jambs made from high-quality pine. Available in laminated, primed, or raw finishes to suit your project needs. Smooth planed surfaces with natural wood grain, perfect for interior door frames, window casings, and architectural trim.",
 					"dimensions": "Various widths and lengths",
 					"material": "Pine & Eucalyptus Wood",
@@ -88,7 +88,7 @@
 				},
 				"moldings": {
 					"name": "Moldings (Raw & Prime)",
-					"category": "Veneers & Components",
+					"category": "Components",
 					"description": "Precision-milled pine moldings for interior finishing. Available in various profiles including baseboards, crown molding, door and window casings, and decorative trim. Pre-finished options available in laminated, primed, or raw finishes for custom applications.",
 					"dimensions": "Various profiles and lengths",
 					"material": "Pine & Eucalyptus Wood",
@@ -126,14 +126,22 @@
 					"material": "Pine & Eucalyptus",
 					"finish": "Structural & Sheathing Grades"
 				},
-				"logsChips": {
-					"name": "Logs & Wood Chips",
-					"category": "Raw Material Supply",
-					"description": "Sustainably harvested eucalyptus and pine logs and wood chips for industrial applications. Logs are ready for processing into lumber or veneer. Wood chips are ideal for biomass energy, pulp production, landscaping, and animal bedding. Available in bulk quantities.",
-					"dimensions": "Logs: Various diameters | Chips: Industrial grade",
-					"material": "Eucalyptus & Pine",
-					"finish": "Natural Raw Material"
-				}
+			"veneers": {
+				"name": "Veneers",
+				"category": "Wood Veneers",
+				"description": "High-quality wood veneers from sustainably sourced pine and eucalyptus. Ultra-thin wood sheets perfect for furniture, cabinetry, architectural panels, and decorative applications. Available in various cuts and grades for premium finishing.",
+				"dimensions": "Standard veneer thicknesses",
+				"material": "Pine & Eucalyptus",
+				"finish": "Rotary Cut & Sliced"
+			},
+			"logsChips": {
+				"name": "Logs & Wood Chips",
+				"category": "Raw Material Supply",
+				"description": "Sustainably harvested eucalyptus and pine logs and wood chips for industrial applications. Logs are ready for processing into lumber. Wood chips are ideal for biomass energy, pulp production, landscaping, and animal bedding. Available in bulk quantities.",
+				"dimensions": "Logs: Various diameters | Chips: Industrial grade",
+				"material": "Eucalyptus & Pine",
+				"finish": "Natural Raw Material"
+			}
 			}
 		},
 		"services": {
@@ -317,14 +325,14 @@
 				"cta": "Baixar PDF"
 			},
 			"items": {
-				"edgeGluedPanels": {
-					"name": "Edge Glued Panels",
-					"category": "Painéis Engenheirados",
-					"description": "Painéis premium de madeira maciça colados nas bordas combinando pinho e eucalipto. Ripas individuais são unidas com precisão nas bordas para criar superfícies amplas e estáveis. Disponível em configurações finger joint ou maciça. Perfeito para tampos de mesa, prateleiras, portas de armários e fabricação de móveis com estabilidade dimensional superior.",
-					"dimensions": "Tamanhos personalizados disponíveis",
-					"material": "Pinho e Eucalipto",
-					"finish": "Finger Joint ou Maciço"
-				},
+			"edgeGluedPanel": {
+				"name": "Edge Glued Panel",
+				"category": "Painéis Engenheirados",
+				"description": "Painéis premium de madeira maciça colados nas bordas combinando pinho e eucalipto. Ripas individuais são unidas com precisão nas bordas para criar superfícies amplas e estáveis. Disponível em configurações finger joint ou maciça. Perfeito para tampos de mesa, prateleiras, portas de armários e fabricação de móveis com estabilidade dimensional superior.",
+				"dimensions": "Tamanhos personalizados disponíveis",
+				"material": "Pinho e Eucalipto",
+				"finish": "Finger Joint ou Maciço"
+			},
 				"roundGluedPanels": {
 					"name": "Round Glued Panels",
 					"category": "Painéis Engenheirados",
@@ -335,7 +343,7 @@
 				},
 				"flatJambs": {
 					"name": "Flat Jambs (Raw & Prime)",
-					"category": "Lâminas e Componentes",
+					"category": "Componentes",
 					"description": "Alisares planos premium para portas e janelas feitos de pinho de alta qualidade. Disponíveis em acabamentos laminado, primer ou natural para atender às necessidades do seu projeto. Superfícies aplainadas lisas com grãos naturais de madeira, perfeitos para marcos de portas internas, guarnições de janelas e acabamentos arquitetônicos.",
 					"dimensions": "Várias larguras e comprimentos",
 					"material": "Madeira de Pinho",
@@ -343,7 +351,7 @@
 				},
 				"moldings": {
 					"name": "Molduras",
-					"category": "Lâminas e Componentes",
+					"category": "Componentes",
 					"description": "Molduras de pinho fresadas com precisão para acabamento interior. Disponíveis em vários perfis incluindo rodapés, molduras de teto, guarnições de portas e janelas, e acabamentos decorativos. Opções pré-acabadas disponíveis em laminado, primer ou natural para aplicações personalizadas.",
 					"dimensions": "Varios perfis e comprimentos",
 					"material": "Madeira de Pinho",
@@ -381,14 +389,22 @@
 					"material": "Pinho e Eucalipto",
 					"finish": "Graus Estruturais e Revestimento"
 				},
-				"logsChips": {
-					"name": "Toras e Cavacos de Madeira",
-					"category": "Fornecimento de Matéria-Prima",
-					"description": "Toras e cavacos de eucalipto e pinho colhidos de forma sustentável para aplicações industriais. Toras prontas para processamento em madeira serrada ou lâminas. Cavacos ideais para energia de biomassa, produção de celulose, paisagismo e cama de animais. Disponível em quantidades a granel.",
-					"dimensions": "Toras: Vários diâmetros | Cavacos: Grau industrial",
-					"material": "Eucalipto e Pinho",
-					"finish": "Matéria-Prima Natural"
-				}
+			"veneers": {
+				"name": "Lâminas",
+				"category": "Lâminas de Madeira",
+				"description": "Lâminas de madeira de alta qualidade de pinho e eucalipto de origem sustentável. Folhas ultrafinas de madeira perfeitas para móveis, marcenaria, painéis arquitetônicos e aplicações decorativas. Disponível em vários cortes e graus para acabamento premium.",
+				"dimensions": "Espessuras padrão de lâmina",
+				"material": "Pinho e Eucalipto",
+				"finish": "Corte Rotativo e Fatiado"
+			},
+			"logsChips": {
+				"name": "Toras e Cavacos de Madeira",
+				"category": "Fornecimento de Matéria-Prima",
+				"description": "Toras e cavacos de eucalipto e pinho colhidos de forma sustentável para aplicações industriais. Toras prontas para processamento em madeira serrada. Cavacos ideais para energia de biomassa, produção de celulose, paisagismo e cama de animais. Disponível em quantidades a granel.",
+				"dimensions": "Toras: Vários diâmetros | Cavacos: Grau industrial",
+				"material": "Eucalipto e Pinho",
+				"finish": "Matéria-Prima Natural"
+			}
 			}
 		},
 		"services": {
@@ -572,14 +588,14 @@
 				"cta": "Descargar PDF"
 			},
 			"items": {
-				"edgeGluedPanels": {
-					"name": "Edge Glued Panels",
-					"category": "Paneles Ingenieriles",
-					"description": "Paneles premium de madera maciza encolados en los bordes combinando pino y eucalipto. Listones individuales se unen con precisión en los bordes para crear superficies amplias y estables. Disponible en configuraciones finger joint o maciza. Perfecto para tableros de mesa, estanterías, puertas de armarios y fabricación de muebles con estabilidad dimensional superior.",
-					"dimensions": "Tamaños personalizados disponibles",
-					"material": "Pino y Eucalipto",
-					"finish": "Finger Joint o Macizo"
-				},
+			"edgeGluedPanel": {
+				"name": "Edge Glued Panel",
+				"category": "Paneles Ingenieriles",
+				"description": "Paneles premium de madera maciza encolados en los bordes combinando pino y eucalipto. Listones individuales se unen con precisión en los bordes para crear superficies amplias y estables. Disponible en configuraciones finger joint o maciza. Perfecto para tableros de mesa, estanterías, puertas de armarios y fabricación de muebles con estabilidad dimensional superior.",
+				"dimensions": "Tamaños personalizados disponibles",
+				"material": "Pino y Eucalipto",
+				"finish": "Finger Joint o Macizo"
+			},
 				"roundGluedPanels": {
 					"name": "Round Glued Panels",
 					"category": "Paneles Ingenieriles",
@@ -590,7 +606,7 @@
 				},
 				"flatJambs": {
 					"name": "Jambas Planas (Raw & Prime)",
-					"category": "Chapas y Componentes",
+					"category": "Componentes",
 					"description": "Jambas planas premium para puertas y ventanas hechas de pino de alta calidad. Disponibles en acabados laminado, imprimado o natural para satisfacer las necesidades de su proyecto. Superficies cepilladas lisas con vetas naturales de madera, perfectas para marcos de puertas interiores, marcos de ventanas y acabados arquitectónicos.",
 					"dimensions": "Varios anchos y longitudes",
 					"material": "Madera de Pino",
@@ -598,7 +614,7 @@
 				},
 				"moldings": {
 					"name": "Molduras",
-					"category": "Chapas y Componentes",
+					"category": "Componentes",
 					"description": "Molduras de pino fresadas con precisión para acabado interior. Disponibles en varios perfiles incluyendo zócalos, molduras de techo, marcos de puertas y ventanas, y acabados decorativos. Opciones pre-acabadas disponibles en laminado, imprimado o natural para aplicaciones personalizadas.",
 					"dimensions": "Varios perfiles y longitudes",
 					"material": "Madera de Pino",
@@ -636,14 +652,22 @@
 					"material": "Pino y Eucalipto",
 					"finish": "Grados Estructurales y de Revestimiento"
 				},
-				"logsChips": {
-					"name": "Troncos y Astillas de Madera",
-					"category": "Suministro de Materia Prima",
-					"description": "Troncos y astillas de eucalipto y pino cosechados de forma sostenible para aplicaciones industriales. Troncos listos para procesamiento en madera aserrada o chapas. Astillas ideales para energía de biomasa, producción de pulpa, paisajismo y cama de animales. Disponible en cantidades a granel.",
-					"dimensions": "Troncos: Varios diámetros | Astillas: Grado industrial",
-					"material": "Eucalipto y Pino",
-					"finish": "Materia Prima Natural"
-				}
+			"veneers": {
+				"name": "Chapas",
+				"category": "Chapas de Madera",
+				"description": "Chapas de madera de alta calidad de pino y eucalipto de origen sostenible. Láminas ultrafinas de madera perfectas para muebles, ebanistería, paneles arquitectónicos y aplicaciones decorativas. Disponible en varios cortes y grados para acabado premium.",
+				"dimensions": "Espesores estándar de chapa",
+				"material": "Pino y Eucalipto",
+				"finish": "Corte Rotativo y Rebanado"
+			},
+			"logsChips": {
+				"name": "Troncos y Astillas de Madera",
+				"category": "Suministro de Materia Prima",
+				"description": "Troncos y astillas de eucalipto y pino cosechados de forma sostenible para aplicaciones industriales. Troncos listos para procesamiento en madera aserrada. Astillas ideales para energía de biomasa, producción de pulpa, paisajismo y cama de animales. Disponible en cantidades a granel.",
+				"dimensions": "Troncos: Varios diámetros | Astillas: Grado industrial",
+				"material": "Eucalipto y Pino",
+				"finish": "Materia Prima Natural"
+			}
 			}
 		},
 		"services": {

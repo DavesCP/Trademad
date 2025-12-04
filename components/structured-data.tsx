@@ -39,7 +39,7 @@ export function StructuredData() {
       "itemListElement": [
         {
           "@type": "Product",
-          "name": "Edge Glued Panels",
+          "name": "Edge Glued Panel",
           "category": "Engineered Wood Panels",
           "material": "Pine & Eucalyptus"
         },
@@ -47,6 +47,12 @@ export function StructuredData() {
           "@type": "Product", 
           "name": "Lumber",
           "category": "Solid Wood Lumber",
+          "material": "Pine & Eucalyptus"
+        },
+        {
+          "@type": "Product",
+          "name": "Veneers",
+          "category": "Wood Veneers",
           "material": "Pine & Eucalyptus"
         },
         {
