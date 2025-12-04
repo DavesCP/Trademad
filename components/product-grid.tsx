@@ -141,13 +141,13 @@ const plywoodImages = [...plywoodSoftwoodImages, ...plywoodHardwoodImages];
 // Veneers/Laminas - separating by species
 const veneersSoftwoodImages = [
   "/images/fotos-produtos/laminas (softwood)/pinho-lamina.jpeg",
-]
+];
 
 const veneersHardwoodImages = [
   "/images/fotos-produtos/laminas (hardwood)/eucalypto-lamina.jpeg",
-]
+];
 
-const veneersImages = [...veneersSoftwoodImages, ...veneersHardwoodImages]
+const veneersImages = [...veneersSoftwoodImages, ...veneersHardwoodImages];
 
 // Logs & Chips - categoria isolada
 const logsChipsImages = [
@@ -159,150 +159,6 @@ const logsChipsImages = [
 const products: Product[] = [
   {
     id: "1",
-    nameKey: "products.items.edgeGluedPanel.name",
-    categoryKey: "products.items.edgeGluedPanel.category",
-    images: edgeGluedPanelImages,
-    speciesImages: {
-      softwood: edgeGluedPanelSoftwoodImages,
-      hardwood: edgeGluedPanelHardwoodImages,
-    },
-    descriptionKey: "products.items.edgeGluedPanel.description",
-    species: ["softwood", "hardwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.edgeGluedPanel.dimensions",
-      material: "products.items.edgeGluedPanel.material",
-      finish: "products.items.edgeGluedPanel.finish",
-    },
-  },
-  {
-    id: "2",
-    nameKey: "products.items.roundGluedPanel.name",
-    categoryKey: "products.items.roundGluedPanel.category",
-    images: roundGluedPanelImages,
-    speciesImages: {
-      softwood: roundGluedPanelImages,
-      hardwood: roundGluedPanelImages,
-    },
-    descriptionKey: "products.items.roundGluedPanel.description",
-    species: ["softwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.roundGluedPanel.dimensions",
-      material: "products.items.roundGluedPanel.material",
-      finish: "products.items.roundGluedPanel.finish",
-    },
-  },
-  {
-    id: "3",
-    nameKey: "products.items.flatJambs.name",
-    categoryKey: "products.items.flatJambs.category",
-    images: flatJambImages,
-    speciesImages: {
-      softwood: flatJambImages,
-      hardwood: flatJambImages,
-    },
-    descriptionKey: "products.items.flatJambs.description",
-    species: ["softwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.flatJambs.dimensions",
-      material: "products.items.flatJambs.material",
-      finish: "products.items.flatJambs.finish",
-    },
-  },
-  {
-    id: "4",
-    nameKey: "products.items.moldings.name",
-    categoryKey: "products.items.moldings.category",
-    images: moldingImages,
-    speciesImages: {
-      softwood: moldingImages,
-      hardwood: moldingImages,
-    },
-    descriptionKey: "products.items.moldings.description",
-    species: ["softwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.moldings.dimensions",
-      material: "products.items.moldings.material",
-      finish: "products.items.moldings.finish",
-    },
-  },
-  {
-    id: "5",
-    nameKey: "products.items.scantling.name",
-    categoryKey: "products.items.scantling.category",
-    images: scantlingImages,
-    speciesImages: {
-      softwood: scantlingSoftwoodImages,
-      hardwood: scantlingHardwoodImages,
-    },
-    descriptionKey: "products.items.scantling.description",
-    species: ["softwood", "hardwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.scantling.dimensions",
-      material: "products.items.scantling.material",
-      finish: "products.items.scantling.finish",
-    },
-  },
-  {
-    id: "6",
-    nameKey: "products.items.stakeLumber.name",
-    categoryKey: "products.items.stakeLumber.category",
-    images: stakeLumberImages,
-    speciesImages: {
-      softwood: stakeLumberSoftwoodImages,
-      hardwood: stakeLumberHardwoodImages,
-    },
-    descriptionKey: "products.items.stakeLumber.description",
-    species: ["softwood", "hardwood"],
-    availability: "cutToSize",
-    specificationsKeys: {
-      dimensions: "products.items.stakeLumber.dimensions",
-      material: "products.items.stakeLumber.material",
-      finish: "products.items.stakeLumber.finish",
-    },
-  },
-  {
-    id: "7",
-    nameKey: "products.items.lumber.name",
-    categoryKey: "products.items.lumber.category",
-    images: lumberImages,
-    speciesImages: {
-      softwood: lumberSoftwoodImages,
-      hardwood: lumberHardwoodImages,
-    },
-    descriptionKey: "products.items.lumber.description",
-    species: ["softwood", "hardwood"],
-    availability: "cutToSize",
-    specificationsKeys: {
-      dimensions: "products.items.lumber.dimensions",
-      material: "products.items.lumber.material",
-      finish: "products.items.lumber.finish",
-    },
-  },
-  {
-    id: "8",
-    nameKey: "products.items.plywoodOsbCdx.name",
-    categoryKey: "products.items.plywoodOsbCdx.category",
-    images: plywoodImages,
-    speciesImages: {
-      softwood: plywoodSoftwoodImages,
-      hardwood: plywoodHardwoodImages,
-    },
-    descriptionKey: "products.items.plywoodOsbCdx.description",
-    species: ["softwood", "hardwood"],
-    availability: "underRequest",
-    specificationsKeys: {
-      dimensions: "products.items.plywoodOsbCdx.dimensions",
-      material: "products.items.plywoodOsbCdx.material",
-      finish: "products.items.plywoodOsbCdx.finish",
-    },
-  },
-  {
-    id: "9",
     nameKey: "products.items.veneers.name",
     categoryKey: "products.items.veneers.category",
     images: veneersImages,
@@ -320,7 +176,7 @@ const products: Product[] = [
     },
   },
   {
-    id: "10",
+    id: "2",
     nameKey: "products.items.logsChips.name",
     categoryKey: "products.items.logsChips.category",
     images: logsChipsImages,
@@ -335,6 +191,150 @@ const products: Product[] = [
       dimensions: "products.items.logsChips.dimensions",
       material: "products.items.logsChips.material",
       finish: "products.items.logsChips.finish",
+    },
+  },
+  {
+    id: "3",
+    nameKey: "products.items.edgeGluedPanel.name",
+    categoryKey: "products.items.edgeGluedPanel.category",
+    images: edgeGluedPanelImages,
+    speciesImages: {
+      softwood: edgeGluedPanelSoftwoodImages,
+      hardwood: edgeGluedPanelHardwoodImages,
+    },
+    descriptionKey: "products.items.edgeGluedPanel.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.edgeGluedPanel.dimensions",
+      material: "products.items.edgeGluedPanel.material",
+      finish: "products.items.edgeGluedPanel.finish",
+    },
+  },
+  {
+    id: "4",
+    nameKey: "products.items.roundGluedPanel.name",
+    categoryKey: "products.items.roundGluedPanel.category",
+    images: roundGluedPanelImages,
+    speciesImages: {
+      softwood: roundGluedPanelImages,
+      hardwood: roundGluedPanelImages,
+    },
+    descriptionKey: "products.items.roundGluedPanel.description",
+    species: ["softwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.roundGluedPanel.dimensions",
+      material: "products.items.roundGluedPanel.material",
+      finish: "products.items.roundGluedPanel.finish",
+    },
+  },
+  {
+    id: "5",
+    nameKey: "products.items.flatJambs.name",
+    categoryKey: "products.items.flatJambs.category",
+    images: flatJambImages,
+    speciesImages: {
+      softwood: flatJambImages,
+      hardwood: flatJambImages,
+    },
+    descriptionKey: "products.items.flatJambs.description",
+    species: ["softwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.flatJambs.dimensions",
+      material: "products.items.flatJambs.material",
+      finish: "products.items.flatJambs.finish",
+    },
+  },
+  {
+    id: "6",
+    nameKey: "products.items.moldings.name",
+    categoryKey: "products.items.moldings.category",
+    images: moldingImages,
+    speciesImages: {
+      softwood: moldingImages,
+      hardwood: moldingImages,
+    },
+    descriptionKey: "products.items.moldings.description",
+    species: ["softwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.moldings.dimensions",
+      material: "products.items.moldings.material",
+      finish: "products.items.moldings.finish",
+    },
+  },
+  {
+    id: "7",
+    nameKey: "products.items.scantling.name",
+    categoryKey: "products.items.scantling.category",
+    images: scantlingImages,
+    speciesImages: {
+      softwood: scantlingSoftwoodImages,
+      hardwood: scantlingHardwoodImages,
+    },
+    descriptionKey: "products.items.scantling.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.scantling.dimensions",
+      material: "products.items.scantling.material",
+      finish: "products.items.scantling.finish",
+    },
+  },
+  {
+    id: "8",
+    nameKey: "products.items.stakeLumber.name",
+    categoryKey: "products.items.stakeLumber.category",
+    images: stakeLumberImages,
+    speciesImages: {
+      softwood: stakeLumberSoftwoodImages,
+      hardwood: stakeLumberHardwoodImages,
+    },
+    descriptionKey: "products.items.stakeLumber.description",
+    species: ["softwood", "hardwood"],
+    availability: "cutToSize",
+    specificationsKeys: {
+      dimensions: "products.items.stakeLumber.dimensions",
+      material: "products.items.stakeLumber.material",
+      finish: "products.items.stakeLumber.finish",
+    },
+  },
+  {
+    id: "9",
+    nameKey: "products.items.lumber.name",
+    categoryKey: "products.items.lumber.category",
+    images: lumberImages,
+    speciesImages: {
+      softwood: lumberSoftwoodImages,
+      hardwood: lumberHardwoodImages,
+    },
+    descriptionKey: "products.items.lumber.description",
+    species: ["softwood", "hardwood"],
+    availability: "cutToSize",
+    specificationsKeys: {
+      dimensions: "products.items.lumber.dimensions",
+      material: "products.items.lumber.material",
+      finish: "products.items.lumber.finish",
+    },
+  },
+  {
+    id: "10",
+    nameKey: "products.items.plywoodOsbCdx.name",
+    categoryKey: "products.items.plywoodOsbCdx.category",
+    images: plywoodImages,
+    speciesImages: {
+      softwood: plywoodSoftwoodImages,
+      hardwood: plywoodHardwoodImages,
+    },
+    descriptionKey: "products.items.plywoodOsbCdx.description",
+    species: ["softwood", "hardwood"],
+    availability: "underRequest",
+    specificationsKeys: {
+      dimensions: "products.items.plywoodOsbCdx.dimensions",
+      material: "products.items.plywoodOsbCdx.material",
+      finish: "products.items.plywoodOsbCdx.finish",
     },
   },
 ];
