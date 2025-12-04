@@ -177,20 +177,20 @@ const products: Product[] = [
   },
   {
     id: "2",
-    nameKey: "products.items.roundGluedPanels.name",
-    categoryKey: "products.items.roundGluedPanels.category",
+    nameKey: "products.items.roundGluedPanel.name",
+    categoryKey: "products.items.roundGluedPanel.category",
     images: roundGluedPanelImages,
     speciesImages: {
       softwood: roundGluedPanelImages,
       hardwood: roundGluedPanelImages,
     },
-    descriptionKey: "products.items.roundGluedPanels.description",
+    descriptionKey: "products.items.roundGluedPanel.description",
     species: ["softwood"],
     availability: "underRequest",
     specificationsKeys: {
-      dimensions: "products.items.roundGluedPanels.dimensions",
-      material: "products.items.roundGluedPanels.material",
-      finish: "products.items.roundGluedPanels.finish",
+      dimensions: "products.items.roundGluedPanel.dimensions",
+      material: "products.items.roundGluedPanel.material",
+      finish: "products.items.roundGluedPanel.finish",
     },
   },
   {

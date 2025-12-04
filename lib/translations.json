@@ -70,9 +70,9 @@
 				"material": "Pine & Eucalyptus",
 				"finish": "Finger-Jointed or Solid"
 			},
-				"roundGluedPanels": {
-					"name": "Round Glued Panels",
-					"category": "Engineered Wood Panels",
+			"roundGluedPanel": {
+				"name": "Round Glued Panel",
+				"category": "Engineered Wood Panels",
 					"description": "Circular glued panels manufactured from carefully selected pine and eucalyptus lamellas. Ideal for tabletops, decorative displays, and architectural details requiring symmetrical shapes with excellent stability.",
 					"dimensions": "Custom diameters available",
 					"material": "Pine & Eucalyptus",
@@ -333,9 +333,9 @@
 				"material": "Pinho e Eucalipto",
 				"finish": "Finger Joint ou Maciço"
 			},
-				"roundGluedPanels": {
-					"name": "Round Glued Panels",
-					"category": "Painéis Engenheirados",
+			"roundGluedPanel": {
+				"name": "Round Glued Panel",
+				"category": "Painéis Engenheirados",
 					"description": "Painéis redondos colados produzidos com lâminas selecionadas de pinho. Ideais para tampos circulares, elementos decorativos e detalhes arquitetônicos que exigem formatos simétricos com excelente estabilidade.",
 					"dimensions": "Diâmetros personalizados disponíveis",
 					"material": "Madeira de Pinho",
@@ -596,9 +596,9 @@
 				"material": "Pino y Eucalipto",
 				"finish": "Finger Joint o Macizo"
 			},
-				"roundGluedPanels": {
-					"name": "Round Glued Panels",
-					"category": "Paneles Ingenieriles",
+			"roundGluedPanel": {
+				"name": "Round Glued Panel",
+				"category": "Paneles Ingenieriles",
 					"description": "Paneles redondos encolados fabricados con láminas seleccionadas de pino. Ideales para tableros circulares, exhibidores decorativos y detalles arquitectónicos que requieren formas simétricas con excelente estabilidad.",
 					"dimensions": "Diámetros personalizados disponibles",
 					"material": "Madera de Pino",
