@@ -38,7 +38,7 @@ export function Footer() {
               onClick={async () => {
                 try {
                   const response = await fetch(
-                    "/files/TradeMad-catalog (5).pdf"
+                    "/files/TradeMad-catalog (2) (1).pdf"
                   );
                   if (!response.ok) throw new Error("PDF não encontrado");
                   const blob = await response.blob();
@@ -52,7 +52,7 @@ export function Footer() {
                   window.URL.revokeObjectURL(url);
                 } catch (error) {
                   console.error("Erro ao baixar PDF:", error);
-                  window.open("/files/TradeMad-catalog (5).pdf", "_blank");
+                  window.open("/files/TradeMad-catalog (2) (1).pdf", "_blank");
                 }
               }}
             >
