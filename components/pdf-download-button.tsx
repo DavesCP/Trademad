@@ -15,7 +15,7 @@ export function PDFDownloadButton({ children, className, size = "lg" }: PDFDownl
 
   const handleDownload = async () => {
     try {
-      const response = await fetch('/files/TradeMad-catalog (2) (1).pdf')
+      const response = await fetch('/files/TradeMad-catalog-final.pdf')
       
       if (!response.ok) {
         throw new Error('PDF não encontrado')
@@ -33,7 +33,7 @@ export function PDFDownloadButton({ children, className, size = "lg" }: PDFDownl
     } catch (error) {
       console.error('Erro ao baixar PDF:', error)
       // Fallback: tentar abrir em nova aba
-      window.open('/files/TradeMad-catalog (2) (1).pdf', '_blank')
+      window.open('/files/TradeMad-catalog-final.pdf', '_blank')
     }
   }
 

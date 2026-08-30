@@ -578,7 +578,7 @@ export function ProductGrid() {
                     onClick={async () => {
                       try {
                         const response = await fetch(
-                          "/files/TradeMad-catalog (2) (1).pdf"
+                          "/files/TradeMad-catalog-final.pdf"
                         );
                         if (!response.ok) throw new Error("PDF não encontrado");
                         const blob = await response.blob();
@@ -593,7 +593,7 @@ export function ProductGrid() {
                       } catch (error) {
                         console.error("Erro ao baixar PDF:", error);
                         window.open(
-                          "/files/TradeMad-catalog (2) (1).pdf",
+                          "/files/TradeMad-catalog-final.pdf",
                           "_blank"
                         );
                       }
