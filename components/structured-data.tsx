@@ -2,8 +2,8 @@ export function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "TradeMad Brazil",
-    "alternateName": "TradeMad Brasil",
+    "name": "TradeMad Americas",
+    "alternateName": "TradeMad Americas Comércio Internacional Ltda",
     "url": "https://trademad.com.br",
     "logo": "https://trademad.com.br/images/logo-trademad.png",
     "contactPoint": {
@@ -20,7 +20,7 @@ export function StructuredData() {
     "sameAs": [
       "https://wa.me/554799101050"
     ],
-    "description": "TradeMad Brazil specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced pine and eucalyptus products from South America to global markets.",
+    "description": "TradeMad Americas specializes in high-quality engineered wood panels, solid lumber, veneers, and raw materials. Sustainably sourced pine and eucalyptus products from South America to global markets.",
     "industry": "Timber Trading",
     "foundingLocation": "Brazil",
     "areaServed": "Worldwide",

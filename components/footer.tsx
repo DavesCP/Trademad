@@ -26,7 +26,7 @@ export function Footer() {
                   />
                 </div>
                 <span className="font-sans font-semibold text-sm leading-none text-center tracking-wide">
-                  TradeMad Brazil
+                  TradeMad Americas
                 </span>
               </Link>
             </div>

@@ -74,7 +74,7 @@ export function Header() {
               />
             </div>
             <span className="font-sans font-semibold text-foreground text-sm sm:text-base leading-none text-center tracking-wide">
-              TradeMad Brazil
+              TradeMad Americas
             </span>
           </Link>
 
